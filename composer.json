@@ -1,0 +1,6 @@
+{
+  "require": {
+    "oxil/kinicart": "dev-master"
+  },
+  "minimum-stability": "dev"
+}
