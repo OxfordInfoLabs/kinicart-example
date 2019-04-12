@@ -1,0 +1,413 @@
+@import "colours"
+
+$font-color: #404040
+
+// Accent buttons
+$accent-button-background: $secondary-color
+$accent-button-color: #ffffff
+$accent-button-color-hover: #ffffff
+
+$brand-lighter-button-background: $brand-lighter-color
+$brand-lighter-button-color: #ffffff
+$brand-lighter-button-color-hover: #ffffff
+
+// Confirm buttons
+$confirm-button-background: map_get($colours, brand-confirm)
+$confirm-button-color: #ffffff
+$confirm-button-color-hover: #ffffff
+
+$alert-button-background: map_get($colours, brand-alert)
+$alert-button-color: #ffffff
+$alert-button-color-hover: #ffffff
+
+// Grey buttons
+$black-button-background: black
+$black-button-background-hover: lighten($black-button-background, 10%)
+$black-button-color: #ffffff
+$black-button-color-hover: #ffffff
+
+$slategrey-button-background: $font-color
+$slategrey-button-background-hover: darken($slategrey-button-background, 10%)
+$slategrey-button-color: #ffffff
+$slategrey-button-color-hover: #ffffff
+
+$midgrey-button-background: #777777
+$midgrey-button-background-hover: darken($midgrey-button-background, 10%)
+$midgrey-button-color: #ffffff
+$midgrey-button-color-hover: #ffffff
+
+
+// Muted Buttons
+$muted-border: 1px solid $accent-color
+$muted-border-hover: 1px solid darken($accent-color, 30%)
+$muted-background: transparent
+$muted-background-hover: transparent
+$muted-color: darken($accent-color, 20%)
+$muted-color-hover: darken($accent-color, 50%)
+
+// Round Buttons
+$round-buttons: 40px
+
+/* Buttons */
+$button-background: $primary-color !default
+$button-background-hover: darken($button-background, 10%)
+$button-color: #ffffff
+$button-font-weight: 600
+$button-font-family: 'Open Sans', Helvetica, Arial, sans-serif
+$button-font-size: 1rem
+$button-border-width: 4px
+$button-border-style: solid
+$button-border-color: $button-background
+$button-border-radius: 0
+$button-text-transform: uppercase
+$button-height: 49px
+$button-height-big: 55px
+$button-height-small: 32px
+/* Buttons
+  =============== */
+
+// Main button styling
+%buttons
+  -webkit-appearance: none
+  //display: inline-block
+  border: $button-border-width $button-border-style $button-border-color
+  border-radius: $button-border-radius
+  background: $button-background
+  color: $button-color
+  font-weight: $button-font-weight
+  font-family: $button-font-family
+  font-size: $button-font-size
+  text-transform: $button-text-transform
+  padding: 0 .75rem
+  margin: 0 0 .5rem 0
+  //vertical-align: middle
+  //text-align: center
+  cursor: pointer
+  text-decoration: none
+  line-height: normal
+  display: flex
+  align-items: center
+  justify-content: space-between
+  height: $button-height
+
+// Buttons on hover
+%buttons-hover
+  border: $button-border-width $button-border-style darken($button-border-color, 10%)
+  background: $button-background-hover
+  color: $button-color
+  text-decoration: none
+
+// Buttons on focus
+%buttons-focus
+  border: $button-border-width $button-border-style darken($button-border-color, 10%)
+  background: darken($button-background, 10%)
+  color: $button-color
+  text-decoration: none
+  outline: none
+
+$buttons: ('.button, a.button')
+
+#{$buttons}
+  @extend %buttons
+  &::-moz-focus-inner
+    border: 0
+    padding: 0
+
+  &:hover
+    @extend %buttons-hover
+
+  &:focus,
+  &:active
+    @extend %buttons-focus
+  &:disabled
+    cursor: not-allowed
+    opacity: .5
+    &:hover
+      opacity: .5
+
+// Secondary button color
+.accent-button,
+a.accent-button
+  color: $accent-button-color
+  border: $button-border-width $button-border-style $accent-button-background
+  background: $accent-button-background
+  &:hover,
+  &:focus,
+  &:active
+    color: $accent-button-color-hover
+    border: $button-border-width $button-border-style darken($accent-button-background, 10%)
+    background: darken($accent-button-background, 10%)
+
+.black-button,
+a.black-button
+  color: $black-button-color
+  border: $button-border-width $button-border-style $black-button-background
+  background: $black-button-background
+  &:hover,
+  &:focus,
+  &:active
+    color: $black-button-color-hover
+    border: $button-border-width $button-border-style darken($black-button-background, 10%)
+    background: darken($black-button-background, 10%)
+
+.slategrey-button,
+a.slategrey-button
+  color: $slategrey-button-color
+  border: $button-border-width $button-border-style $slategrey-button-background
+  background: $slategrey-button-background
+  &:hover,
+  &:focus,
+  &:active
+    color: $slategrey-button-color-hover
+    border: $button-border-width $button-border-style darken($slategrey-button-background, 10%)
+    background: darken($slategrey-button-background, 10%)
+
+.midgrey-button,
+a.midgrey-button
+  color: $midgrey-button-color
+  border: $button-border-width $button-border-style $midgrey-button-background
+  background: $midgrey-button-background
+  &:hover,
+  &:focus,
+  &:active
+    color: $midgrey-button-color-hover
+    border: $button-border-width $button-border-style darken($midgrey-button-background, 10%)
+    background: darken($midgrey-button-background, 10%)
+
+.white-button,
+a.white-button
+  color: $font-color
+  border: $button-border-width $button-border-style white
+  background: white
+  &:hover,
+  &:focus,
+  &:active
+    color: $font-color
+    border: $button-border-width $button-border-style white
+    background: white
+
+.alert-button,
+a.alert-button
+  color: $alert-button-color
+  border: $button-border-width $button-border-style $alert-button-background
+  background: $alert-button-background
+  &:hover,
+  &:focus,
+  &:active
+    color: $alert-button-color-hover
+    border: $button-border-width $button-border-style darken($alert-button-background, 5%)
+    background: darken($alert-button-background, 5%)
+
+.confirm-button,
+a.confirm-button
+  color: $confirm-button-color
+  border: $button-border-width $button-border-style $confirm-button-background
+  background: $confirm-button-background
+  &:hover,
+  &:focus,
+  &:active
+    color: $confirm-button-color-hover
+    border: $button-border-width $button-border-style darken($confirm-button-background, 5%)
+    background: darken($confirm-button-background, 5%)
+
+// Muted buttons
+.muted-button,
+a.muted-button
+  background: $muted-background
+  border: $muted-border
+  color: $muted-color
+  &:hover,
+  &:focus,
+  &:active
+    color: $muted-color-hover
+    border: $muted-border-hover
+    background: $muted-background-hover
+
+.muted-white-button,
+a.muted-white-button
+  background: white
+  color: $muted-color-hover
+  border: $muted-border-hover
+  &:hover,
+  &:focus,
+  &:active
+    border: 1px solid #2f2f2f
+    color: #2f2f2f
+    background: white
+
+// Muted buttons
+.disabled-button,
+a.disabled-button
+  background: $muted-background
+  border: $muted-border
+  color: $muted-color
+  &:hover,
+  &:focus,
+  &:active
+    background: $muted-background
+    border: $muted-border
+    color: $muted-color
+    cursor: not-allowed
+
+// Round buttons
+.round-button,
+a.round-button
+  border-radius: $round-buttons
+
+// Square buttons
+.square-button,
+a.square-button
+  border-radius: 0
+
+// Full width buttons (block level)
+.full-button,
+a.full-button
+  display: block
+  width: 100%
+
+
+.inverse-button,
+a.inverse-button
+  background-color: transparent
+  &.white
+    background-color: white
+    &:hover
+      background-color: $brand
+
+  color: $brand
+  &.accent-button
+    color: $secondary-color
+    &:hover
+      background-color: $secondary-color
+      color: white
+      border-color: $secondary-color
+  &.brand-lighter-button
+    color: $brand-lighter-color
+    border-color: $brand-lighter-color
+    &:hover
+      background-color: $brand-lighter-color
+      color: white
+      border-color: $brand-lighter-color
+  &.black-button
+    color: $black-button-background
+    background-color: white
+    &:hover
+      background-color: $black-button-background
+      color: white
+      border-color: $black-button-background
+  &.slategrey-button
+    color: $slategrey-button-background
+    background-color: white
+    &:hover
+      background-color: $slategrey-button-background
+      color: white
+      border-color: $slategrey-button-background
+  &.midgrey-button
+    color: $midgrey-button-background
+    &:hover
+      background-color: $midgrey-button-background
+      color: white
+      border-color: $midgrey-button-background
+  &.white-button
+    color: white
+    border-color: white
+    &:hover
+      background-color: white
+      color: $font-color
+      border-color: white
+
+
+
+
+.big-button,
+a.big-button
+  height: $button-height-big
+
+.small-button,
+a.small-button
+  height: $button-height-small
+  font-size: .9rem
+  padding: 0 .5rem
+
+
+.arrow-right
+  &:after
+    font-family: 'Netistrar-Font'
+    content: '\e902'
+    margin-left: .25rem
+
+.chevron-right
+  &:after
+    font-family: 'Netistrar-Font'
+    content: '\e90e'
+    margin-left: .25rem
+    font-size: .8rem
+
+.cta-link
+  display: flex
+  align-items: center
+  text-transform: uppercase
+  text-decoration: none
+  font-size: 1rem
+  @extend .chevron-right
+  &.less
+    text-transform: none
+
+
+  &:hover
+
+.inverse-link
+  color: white
+  &:hover, &:focus
+    color: white
+
+button.link-button
+  background-color: transparent
+  border: none
+  color: $link-color
+  text-transform: none
+  display: inline-block
+  text-decoration: underline
+  font-weight: bold
+  //font-size: inherit
+  padding: 0
+  margin: 0
+  height: auto
+  &:focus
+    outline: none
+  &.link-button-flex
+    display: flex
+    align-items: center
+    text-decoration: none
+  &.link-button-inverse
+    text-decoration: none
+  &.white-text
+    @extend .white-text
+  &.flex
+    @extend .flex
+
+.remove-button
+  background-color: white
+  border: 1px solid #dddddd
+  color: #777777
+  line-height: .75rem
+  font-size: .75rem
+  height: auto
+  padding: .25rem .5rem
+  text-transform: none
+  font-weight: 200
+  border-radius: 3px
+  display: flex
+  align-items: center
+  &:hover
+    background-color: white
+    color: #777777
+    border: 1px solid #dddddd
+  &:focus
+    outline: none
+    background-color: white
+    border: 1px solid #dddddd
+    color: #777777
+  i
+    font-size: .75rem
+    color: #aaaaaa

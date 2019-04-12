@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { MatButtonModule, MatIconModule, MatListModule, MatSidenavModule, MatToolbarModule } from "@angular/material";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgKinicartModule } from 'ng-kinicart';
+import { LoginSecurityComponent } from './login-security/login-security.component';
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        LoginSecurityComponent
     ],
     imports: [
         BrowserModule,
@@ -22,7 +24,9 @@ import { NgKinicartModule } from 'ng-kinicart';
         MatButtonModule,
         NgKinicartModule
     ],
-    providers: [],
+    providers: [
+
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {

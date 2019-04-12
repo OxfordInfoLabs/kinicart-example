@@ -10,7 +10,8 @@
       "prefix": "app",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "sass"
+          "style": "sass",
+          "skipTests": true
         }
       },
       "architect": {
@@ -22,6 +23,7 @@
             "main": "dashboard/customer/src/main.ts",
             "polyfills": "dashboard/customer/src/polyfills.ts",
             "tsConfig": "dashboard/customer/src/tsconfig.app.json",
+            "preserveSymlinks": true,
             "assets": [
               "dashboard/customer/src/favicon.ico",
               "dashboard/customer/src/assets"
@@ -142,7 +144,8 @@
       "prefix": "app",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "sass"
+          "style": "sass",
+          "skipTests": true
         }
       },
       "architect": {
@@ -154,6 +157,7 @@
             "main": "dashboard/admin/src/main.ts",
             "polyfills": "dashboard/admin/src/polyfills.ts",
             "tsConfig": "dashboard/admin/src/tsconfig.app.json",
+            "preserveSymlinks": true,
             "assets": [
               "dashboard/admin/src/favicon.ico",
               "dashboard/admin/src/assets"
