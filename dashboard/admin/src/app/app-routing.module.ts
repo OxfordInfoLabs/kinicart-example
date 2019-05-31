@@ -1,11 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginSecurityComponent } from "./login-security/login-security.component";
+import { AccountSummaryComponent } from './account-summary/account-summary.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
     {
-        path: 'login-security',
-        component: LoginSecurityComponent
+        path: 'login',
+        component: LoginComponent
+    },
+    {
+        path: 'account-summary',
+        component: AccountSummaryComponent
+    },
+    {
+        path: '**',
+        redirectTo: '',
+        pathMatch: 'full'
     }
 ];
 
