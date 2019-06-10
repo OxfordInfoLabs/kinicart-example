@@ -2,5 +2,14 @@
   "require": {
     "oxil/kinicart": "dev-master"
   },
-  "minimum-stability": "dev"
+  "minimum-stability": "dev",
+  "config": {
+    "process-timeout": 0,
+    "source-directory": "backend/src"
+  },
+  "scripts": {
+    "serve": "php -S localhost:5000 -t backend/src",
+    "clean-database": "Kinicart\\SQL\\DBInstaller::clean",
+    "test-data": "Kinicart\\Test\\TestData\\TestDataInstaller::install"
+  }
 }

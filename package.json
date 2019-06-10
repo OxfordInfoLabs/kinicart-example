@@ -2,6 +2,8 @@
   "name": "admin",
   "version": "0.0.0",
   "scripts": {
+    "testdata": "cd vendor/oxil/kinicart/test; php InstallTestInstance.php",
+    "backend": "",
     "admin": "ng serve admin --port 3200",
     "customer": "ng serve customer --port 3201"
   },

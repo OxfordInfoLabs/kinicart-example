@@ -1,0 +1,9 @@
+# Config file
+
+application.name = Kinicart Example App
+application.namespace = KinicartExample
+
+db.provider = sqlite3
+db.filename = DB/application.db
+
+
