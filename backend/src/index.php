@@ -1,11 +1,12 @@
 <?php
 
-use Kinikit\MVC\Framework\Dispatcher;
+use Kinicart\Init;
 
 // Include the vendor autoload.
-include_once "../../vendor/autoload.php";
+include_once "../vendor/autoload.php";
 
-// Dispatch the Kinikit dispatcher.
-(new Dispatcher())->dispatch();
+// Call kinicart init
+new Init();
+
 
 

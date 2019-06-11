@@ -1,0 +1,16 @@
+{
+  "require": {
+    "oxil/kinicart": "dev-master"
+  },
+  "minimum-stability": "dev",
+  "config": {
+    "process-timeout": 0,
+    "source-directory": "src",
+    "test-directory": "test"
+  },
+  "scripts": {
+    "serve": "php -S localhost:5000 -t src",
+    "clean-database": "Kinicart\\DB\\DBInstaller::runFromComposer",
+    "test-data": "Kinicart\\Test\\TestData\\TestDataInstaller::runFromComposer"
+  }
+}
