@@ -6,10 +6,14 @@ import { AppComponent } from './app.component';
 import { MatButtonModule, MatIconModule, MatListModule, MatSidenavModule, MatToolbarModule } from "@angular/material";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgKinicartModule } from 'ng-kinicart';
+import { AccountSummaryComponent } from './views/account-summary/account-summary.component';
+import { LoginComponent } from './views/login/login.component';
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        AccountSummaryComponent,
+        LoginComponent
     ],
     imports: [
         BrowserModule,
@@ -22,7 +26,9 @@ import { NgKinicartModule } from 'ng-kinicart';
         MatButtonModule,
         NgKinicartModule
     ],
-    providers: [],
+    providers: [
+
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
