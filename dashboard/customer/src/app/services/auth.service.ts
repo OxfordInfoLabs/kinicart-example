@@ -13,10 +13,14 @@ export class AuthService {
     }
 
     public getLoggedInUser(): any {
-        return this.kbRequest.makeGetRequest('http://localhost:5000/guest/auth').toPromise().then(res => {
-            this.setSessionUser(res.loggedInUser);
-            return res.loggedInUser;
-        });
+        return this.kbRequest.makeGetRequest('http://localhost:5000/customer/account/user').toPromise()
+            .then(res => {
+                if (res) {
+                    this.setSessionUser(res);
+                    return res;
+                }
+                return null;
+            });
     }
 
     public login(username: string, password: string) {
@@ -39,6 +43,10 @@ export class AuthService {
                 sessionStorage.removeItem('pendingLoginSession');
                 return this.setSessionUser(user);
             });
+    }
+
+    public doesUserExist(username: string) {
+        return Promise.resolve(true);
     }
 
     public logout() {

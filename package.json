@@ -21,7 +21,7 @@
     "@angular/router": "~8.0.0",
     "core-js": "^2.5.4",
     "ng-kinibind": "0.0.8",
-    "ng-kinicart": "file:../ng-kinicart/dist/ng-kinicart",
+    "ng-kinicart": "0.0.5",
     "rxjs": "~6.5.2",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
