@@ -58,12 +58,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OxfordInfoLabs/kinicart.git",
-                "reference": "6e0da1f7465d93140ded2ed83c10329f4744b52d"
+                "reference": "bbbd95742529e03d8b6584aebbee1d64a35ff3df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OxfordInfoLabs/kinicart/zipball/6e0da1f7465d93140ded2ed83c10329f4744b52d",
-                "reference": "6e0da1f7465d93140ded2ed83c10329f4744b52d",
+                "url": "https://api.github.com/repos/OxfordInfoLabs/kinicart/zipball/bbbd95742529e03d8b6584aebbee1d64a35ff3df",
+                "reference": "bbbd95742529e03d8b6584aebbee1d64a35ff3df",
                 "shasum": ""
             },
             "require": {
@@ -87,7 +87,7 @@
                 "cart",
                 "php"
             ],
-            "time": "2019-06-18T09:29:08+00:00"
+            "time": "2019-06-18T14:32:41+00:00"
         },
         {
             "name": "oxil/kinikit-core",
