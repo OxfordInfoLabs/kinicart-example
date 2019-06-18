@@ -5,18 +5,17 @@ addons:
       - google-chrome
     packages:
       - google-chrome-stable
+
 language: node_js
 node_js:
   - 8
 
-before_script:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
+services:
+  - xvfb
 
 install:
   - npm install
 
 notifications:
   slack:
-    secure: Q7mvsFsvSkuS1K0vsPlD/WUN+uFRxfBQLsERL0gc9LcyWwt5yefbVxK7EMXKMruQ39gZLC2zuJOrSaG7ebwkDxgxY6GseGU6JYsonvBnr+7birmvmx8ICLu/lnTxaPov5FsyP9FkKCMg4beTOnm8ZfTAaKEEVGeDEOyVypC45vRPF0iS8L0EcKTheqevDQd7LVXgBCSiAgeQ6PQTd3lb+0FaBHDOVJ/rfXr2DjUtEetTkREJWzqDpDmSOcDthGFeXxgH+wsWledAS09KSX7UHe5Diy3WcE3Q0yot1FT/T7yeGckFHJsthhQBN6y+nttEacRjsjTq/nFF6ZGRbt1ANm/jSBHUEIKEs52/w/muG+FvdudQnv79WJj3ruddxr2+9TY5mCriDwdcuh+lvUY9+EGCDBXAg4JaPlZYyhtIgvveF/tcOjgHMIbzA8xntBiriBhC7mZjah6YIf0ouEjbDbdvLLlzBeJtJURusSOmuU1SdKGPduXJl5WnvVDWVjZwvheRQFEUS27a8fE6VUVNQui0CDt+o2F1OVCMVV3QonnA3jZjrJv9haNyYr50h40tjR8jjV8coTXCLFiBS2BelvUOdF4S3Uv3oEHLQSYQ2sfYWBdmPRkThwHH3sYOPBdgleLQHF9v8XyDOzHhRZoRS3HFPIqxPJBX5+yTxijz7DY=
-
+    secure: il37MYIBZBYqb4NhdnjwAaOpKoXnlUpxw39uVmViepKy2sbqJagMeiIuTDserDxw2edRCGJOg9ZyvKRQrUPBqB0/hTjQid8t6ZsL+b+60/hz7UOGHeULGOgZ4WtpHZXh3J17R9BARMNXBm2u768or3znITO2q6qJ4htdIQVwg/K6EZcrpaM4em02ZVamF5elxIguD35FCKJMMDiLZq61Y8sZhqahXcmzGrc60woYthCZ6gF9/n/pTE+GM01TpG+bbidtEQYKMoDe00zx8p8Ivl2mMIIFuoe/x8qoFcoUxNiq0LSRx2HWcNSIncT5U1lAZ6VNAhpmu+/y+G8Umk1engcGY3C+R1xNrbmQp4AJ2HHEMLjVrY9Uk26yVSQ/XAYxactNj3JxScpvROlOJOszp/eepSWrDP2/cTeRty4LDE/okwNeS8n4viOSDvyjVFwRdkaw3hKJnUHI2ea69a3GY+1+yXzI0VU3TItm01j4ovYr2NHv0ZKJivsa8s1etGAzun4NLpWXQK2JxmwZXM7tpeahr0y7TDKwtT3sbM3J1gH5B+AcCp0uhddHobFQW4g282ghPXdec20F6he4F8KNTpEs3ulucC/mU0V1C73MplOu3yv4SdS28R9DNS/qIroqRaRE34Hr5yDccoWwKs4OcEZCa8DOZu8lXa69h6v81oU=
