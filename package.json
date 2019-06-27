@@ -4,8 +4,12 @@
   "scripts": {
     "testdata": "cd backend; composer test-data",
     "backend": "cd backend; composer serve",
-    "admin": "ng serve admin --port 3200",
-    "customer": "ng serve customer --port 3201"
+    "admin": "ng serve admin --port 5001",
+    "customer": "ng serve customer --port 5002",
+    "testdata-test": "cd backend; export KINIKIT_CONFIG_FILE=testdata/config.txt.test; composer test-data",
+    "deploy-test": "cd backend; gcloud app deploy app.test.yaml",
+    "e2e": "protractor backend/e2e/conf.js",
+    "e2e-travis": "protractor backend/e2e/conf.travis.js"
   },
   "private": true,
   "dependencies": {
@@ -20,10 +24,11 @@
     "@angular/platform-browser-dynamic": "~8.0.2",
     "@angular/router": "~8.0.2",
     "core-js": "^2.5.4",
+    "axios": "^0.19.0",
     "ng-kinibind": "0.0.8",
     "ng-kinicart": "file:../ng-kinicart/dist/ng-kinicart",
     "rxjs": "~6.5.2",
-    "tslib": "^1.9.0",
+    "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {

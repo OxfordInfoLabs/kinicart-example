@@ -58,12 +58,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OxfordInfoLabs/kinicart.git",
-                "reference": "8f950d0c1368e277f6ea1d1fb4fe20f1b67070dd"
+                "reference": "bbbd95742529e03d8b6584aebbee1d64a35ff3df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OxfordInfoLabs/kinicart/zipball/8f950d0c1368e277f6ea1d1fb4fe20f1b67070dd",
-                "reference": "8f950d0c1368e277f6ea1d1fb4fe20f1b67070dd",
+                "url": "https://api.github.com/repos/OxfordInfoLabs/kinicart/zipball/bbbd95742529e03d8b6584aebbee1d64a35ff3df",
+                "reference": "bbbd95742529e03d8b6584aebbee1d64a35ff3df",
                 "shasum": ""
             },
             "require": {
@@ -87,7 +87,7 @@
                 "cart",
                 "php"
             ],
-            "time": "2019-06-12T07:51:29+00:00"
+            "time": "2019-06-18T14:32:41+00:00"
         },
         {
             "name": "oxil/kinikit-core",
@@ -95,20 +95,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OxfordInfoLabs/kinikit-core.git",
-                "reference": "26f5d4731778552d03c585f515bc2ffce379ba14"
+                "reference": "26cb984de369d38d646941f332e6642042195d62"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OxfordInfoLabs/kinikit-core/zipball/26f5d4731778552d03c585f515bc2ffce379ba14",
-                "reference": "26f5d4731778552d03c585f515bc2ffce379ba14",
+                "url": "https://api.github.com/repos/OxfordInfoLabs/kinikit-core/zipball/26cb984de369d38d646941f332e6642042195d62",
+                "reference": "26cb984de369d38d646941f332e6642042195d62",
                 "shasum": ""
             },
             "require": {
                 "ext-iconv": "*",
                 "ext-libxml": "*",
                 "ext-mbstring": "*",
+                "mustache/mustache": "*",
                 "php": "^5.6|^7.0",
-                "phpmailer/phpmailer": "*"
+                "twig/twig": "*"
             },
             "type": "library",
             "autoload": {
@@ -128,7 +129,7 @@
                 "php",
                 "webservices"
             ],
-            "time": "2019-06-12T10:03:09+00:00"
+            "time": "2019-06-18T08:20:35+00:00"
         },
         {
             "name": "oxil/kinikit-mvc",
@@ -136,18 +137,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OxfordInfoLabs/kinikit-mvc.git",
-                "reference": "5db187944171a802601aeedae0026bd0bf0ffb02"
+                "reference": "1e0aae590818d1dfd230176b87756fb9f1c30d47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OxfordInfoLabs/kinikit-mvc/zipball/5db187944171a802601aeedae0026bd0bf0ffb02",
-                "reference": "5db187944171a802601aeedae0026bd0bf0ffb02",
+                "url": "https://api.github.com/repos/OxfordInfoLabs/kinikit-mvc/zipball/1e0aae590818d1dfd230176b87756fb9f1c30d47",
+                "reference": "1e0aae590818d1dfd230176b87756fb9f1c30d47",
                 "shasum": ""
             },
             "require": {
-                "mustache/mustache": "*",
-                "oxil/kinikit-core": "*",
-                "twig/twig": "*"
+                "oxil/kinikit-core": "dev-master"
             },
             "type": "library",
             "autoload": {
@@ -167,7 +166,7 @@
                 "php",
                 "webservices"
             ],
-            "time": "2019-06-12T09:19:12+00:00"
+            "time": "2019-06-17T14:46:54+00:00"
         },
         {
             "name": "oxil/kinikit-persistence",
@@ -175,16 +174,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OxfordInfoLabs/kinikit-persistence.git",
-                "reference": "743c5510bb31af1b5151de349dabd12291972358"
+                "reference": "ca29e871919ab9de26a4305acf8c9c83433d4850"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OxfordInfoLabs/kinikit-persistence/zipball/743c5510bb31af1b5151de349dabd12291972358",
-                "reference": "743c5510bb31af1b5151de349dabd12291972358",
+                "url": "https://api.github.com/repos/OxfordInfoLabs/kinikit-persistence/zipball/ca29e871919ab9de26a4305acf8c9c83433d4850",
+                "reference": "ca29e871919ab9de26a4305acf8c9c83433d4850",
                 "shasum": ""
             },
             "require": {
-                "oxil/kinikit-core": "*"
+                "oxil/kinikit-core": "dev-master"
             },
             "type": "library",
             "autoload": {
@@ -204,7 +203,7 @@
                 "php",
                 "webservices"
             ],
-            "time": "2019-06-11T14:34:55+00:00"
+            "time": "2019-06-17T14:46:28+00:00"
         },
         {
             "name": "phpmailer/phpmailer",
@@ -315,7 +314,7 @@
                 },
                 {
                     "name": "Gert de Pagter",
-                    "email": "BackEndTea@gmail.com"
+                    "email": "backendtea@gmail.com"
                 }
             ],
             "description": "Symfony polyfill for ctype functions",
@@ -389,20 +388,20 @@
         },
         {
             "name": "twig/twig",
-            "version": "2.x-dev",
+            "version": "3.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "b957ff6f290ccc6caa0015a646b4add1fc216a00"
+                "reference": "569d84b287f5a93dd1c2b4cd3515369b8b4ad76f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/b957ff6f290ccc6caa0015a646b4add1fc216a00",
-                "reference": "b957ff6f290ccc6caa0015a646b4add1fc216a00",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/569d84b287f5a93dd1c2b4cd3515369b8b4ad76f",
+                "reference": "569d84b287f5a93dd1c2b4cd3515369b8b4ad76f",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.0",
+                "php": "^7.2",
                 "symfony/polyfill-ctype": "^1.8",
                 "symfony/polyfill-mbstring": "^1.3"
             },
@@ -414,13 +413,10 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.11-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Twig_": "lib/"
-                },
                 "psr-4": {
                     "Twig\\": "src/"
                 }
@@ -452,7 +448,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2019-06-10T17:37:27+00:00"
+            "time": "2019-06-10T17:59:27+00:00"
         }
     ],
     "packages-dev": [],
