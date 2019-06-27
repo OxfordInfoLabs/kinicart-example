@@ -12,6 +12,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgKinicartModule } from 'ng-kinicart';
 import { AccountSummaryComponent } from './views/account-summary/account-summary.component';
 import { LoginComponent } from './views/login/login.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { SessionInterceptor } from './session.interceptor';
 
 @NgModule({
     declarations: [
@@ -31,7 +33,11 @@ import { LoginComponent } from './views/login/login.component';
         NgKinicartModule
     ],
     providers: [
-
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: SessionInterceptor,
+            multi: true
+        }
     ],
     bootstrap: [AppComponent]
 })

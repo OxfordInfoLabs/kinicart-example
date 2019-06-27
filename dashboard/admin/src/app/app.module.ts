@@ -12,6 +12,9 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgKinicartModule } from 'ng-kinicart';
 import { AccountSummaryComponent } from './account-summary/account-summary.component';
 import { LoginComponent } from './login/login.component';
+import { SessionInterceptor } from './session.interceptor';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+
 
 @NgModule({
     declarations: [
@@ -28,10 +31,16 @@ import { LoginComponent } from './login/login.component';
         MatListModule,
         MatToolbarModule,
         MatButtonModule,
-        NgKinicartModule
+        NgKinicartModule.forRoot({
+            httpURL: 'http://localhost:5000'
+        })
     ],
     providers: [
-
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: SessionInterceptor,
+            multi: true
+        }
     ],
     bootstrap: [AppComponent]
 })
