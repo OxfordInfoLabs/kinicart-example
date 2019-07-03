@@ -27,7 +27,7 @@
     "core-js": "^2.5.4",
     "axios": "^0.19.0",
     "ng-kinibind": "0.0.8",
-    "ng-kinicart": "file:../ng-kinicart/dist/ng-kinicart",
+    "ng-kiniauth": "file:../../kiniauth/ng-kiniauth/dist/ng-kiniauth",
     "rxjs": "~6.5.2",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

@@ -9,11 +9,11 @@ import { MatListModule } from "@angular/material/list";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { NgKinicartModule } from 'ng-kinicart';
 import { AccountSummaryComponent } from './account-summary/account-summary.component';
 import { LoginComponent } from './login/login.component';
 import { SessionInterceptor } from './session.interceptor';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { NgKiniAuthModule } from 'ng-kiniauth';
 
 
 @NgModule({
@@ -31,7 +31,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
         MatListModule,
         MatToolbarModule,
         MatButtonModule,
-        NgKinicartModule.forRoot({
+        NgKiniAuthModule.forRoot({
             httpURL: 'http://localhost:5000'
         })
     ],
