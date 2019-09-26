@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f3e35b6e10854a4b10e358844bfd1956",
+    "content-hash": "36145e3aefdb84ca13cd98ca8808b626",
     "packages": [
         {
             "name": "cache/adapter-common",
@@ -55,7 +55,7 @@
                 {
                     "name": "Tobias Nyholm",
                     "email": "tobias.nyholm@gmail.com",
-                    "homepage": "https://github.com/nyholm"
+                    "homepage": "https://github.com/Nyholm"
                 }
             ],
             "description": "Common classes for PSR-6 adapters",
@@ -123,7 +123,7 @@
                 {
                     "name": "Tobias Nyholm",
                     "email": "tobias.nyholm@gmail.com",
-                    "homepage": "https://github.com/nyholm"
+                    "homepage": "https://github.com/Nyholm"
                 }
             ],
             "description": "A PSR-6 cache implementation using filesystem. This implementation supports tags",
@@ -173,7 +173,7 @@
                 {
                     "name": "Tobias Nyholm",
                     "email": "tobias.nyholm@gmail.com",
-                    "homepage": "https://github.com/nyholm"
+                    "homepage": "https://github.com/Nyholm"
                 },
                 {
                     "name": "Nicolas Grekas",
@@ -298,12 +298,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "741e9792d5f4efa1453513cb3adf6cf767090b82"
+                "reference": "85887aa203f1af6048416a88c7e11f74efe03f03"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/741e9792d5f4efa1453513cb3adf6cf767090b82",
-                "reference": "741e9792d5f4efa1453513cb3adf6cf767090b82",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/85887aa203f1af6048416a88c7e11f74efe03f03",
+                "reference": "85887aa203f1af6048416a88c7e11f74efe03f03",
                 "shasum": ""
             },
             "require": {
@@ -374,7 +374,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2019-06-20T20:52:55+00:00"
+            "time": "2019-09-19T09:54:50+00:00"
         },
         {
             "name": "mustache/mustache",
@@ -423,17 +423,17 @@
             "time": "2017-07-11T12:54:05+00:00"
         },
         {
-            "name": "oxil/kinicart",
+            "name": "oxil/kiniauth",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/OxfordInfoLabs/kinicart.git",
-                "reference": "a993ba2ece212044c3d70497d74ba55a2a046a6f"
+                "url": "https://github.com/OxfordInfoLabs/kiniauth.git",
+                "reference": "2e06ef1df92a6004c835b7e9d7de31205a32b8f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OxfordInfoLabs/kinicart/zipball/a993ba2ece212044c3d70497d74ba55a2a046a6f",
-                "reference": "a993ba2ece212044c3d70497d74ba55a2a046a6f",
+                "url": "https://api.github.com/repos/OxfordInfoLabs/kiniauth/zipball/2e06ef1df92a6004c835b7e9d7de31205a32b8f4",
+                "reference": "2e06ef1df92a6004c835b7e9d7de31205a32b8f4",
                 "shasum": ""
             },
             "require": {
@@ -447,19 +447,19 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Kinicart\\Test\\": "test/",
-                    "Kinicart\\": "src/"
+                    "Kiniauth\\Test\\": "test/",
+                    "Kiniauth\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "description": "Kinicart - database driven PHP cart built upon Kinikit with REST API support",
+            "description": "Kiniauth - database driven PHP authentication layer built on Kinikit",
             "homepage": "https://kinicart.com",
             "keywords": [
                 "application",
                 "cart",
                 "php"
             ],
-            "time": "2019-06-28T11:32:04+00:00"
+            "time": "2019-09-26T11:43:24+00:00"
         },
         {
             "name": "oxil/kinikit-core",
@@ -467,12 +467,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OxfordInfoLabs/kinikit-core.git",
-                "reference": "113a94543d5a998753481ac1a00da20de1edde11"
+                "reference": "81677be50a3e79b6faac5e173142a78999180550"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OxfordInfoLabs/kinikit-core/zipball/113a94543d5a998753481ac1a00da20de1edde11",
-                "reference": "113a94543d5a998753481ac1a00da20de1edde11",
+                "url": "https://api.github.com/repos/OxfordInfoLabs/kinikit-core/zipball/81677be50a3e79b6faac5e173142a78999180550",
+                "reference": "81677be50a3e79b6faac5e173142a78999180550",
                 "shasum": ""
             },
             "require": {
@@ -501,7 +501,7 @@
                 "php",
                 "webservices"
             ],
-            "time": "2019-06-24T16:30:23+00:00"
+            "time": "2019-09-26T11:35:33+00:00"
         },
         {
             "name": "oxil/kinikit-mvc",
@@ -509,12 +509,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OxfordInfoLabs/kinikit-mvc.git",
-                "reference": "ebe413f67e0e6ba5cdd70f0ae8de76423b246de8"
+                "reference": "d1100ce910dd5b6dcf1600defa86834d446a4fad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OxfordInfoLabs/kinikit-mvc/zipball/ebe413f67e0e6ba5cdd70f0ae8de76423b246de8",
-                "reference": "ebe413f67e0e6ba5cdd70f0ae8de76423b246de8",
+                "url": "https://api.github.com/repos/OxfordInfoLabs/kinikit-mvc/zipball/d1100ce910dd5b6dcf1600defa86834d446a4fad",
+                "reference": "d1100ce910dd5b6dcf1600defa86834d446a4fad",
                 "shasum": ""
             },
             "require": {
@@ -538,7 +538,7 @@
                 "php",
                 "webservices"
             ],
-            "time": "2019-06-25T13:27:20+00:00"
+            "time": "2019-09-26T11:45:10+00:00"
         },
         {
             "name": "oxil/kinikit-persistence",
@@ -546,12 +546,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OxfordInfoLabs/kinikit-persistence.git",
-                "reference": "ca29e871919ab9de26a4305acf8c9c83433d4850"
+                "reference": "b3c944b4820280beb5163b2bd6d60659460439d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OxfordInfoLabs/kinikit-persistence/zipball/ca29e871919ab9de26a4305acf8c9c83433d4850",
-                "reference": "ca29e871919ab9de26a4305acf8c9c83433d4850",
+                "url": "https://api.github.com/repos/OxfordInfoLabs/kinikit-persistence/zipball/b3c944b4820280beb5163b2bd6d60659460439d3",
+                "reference": "b3c944b4820280beb5163b2bd6d60659460439d3",
                 "shasum": ""
             },
             "require": {
@@ -575,7 +575,7 @@
                 "php",
                 "webservices"
             ],
-            "time": "2019-06-17T14:46:28+00:00"
+            "time": "2019-09-26T11:36:55+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -830,12 +830,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "82ebae02209c21113908c229e9883c419720738a"
+                "reference": "550ebaac289296ce228a706d0867afc34687e3f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/82ebae02209c21113908c229e9883c419720738a",
-                "reference": "82ebae02209c21113908c229e9883c419720738a",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/550ebaac289296ce228a706d0867afc34687e3f4",
+                "reference": "550ebaac289296ce228a706d0867afc34687e3f4",
                 "shasum": ""
             },
             "require": {
@@ -847,7 +847,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.11-dev"
+                    "dev-master": "1.12-dev"
                 }
             },
             "autoload": {
@@ -864,12 +864,12 @@
             ],
             "authors": [
                 {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                },
-                {
                     "name": "Gert de Pagter",
                     "email": "BackEndTea@gmail.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
                 }
             ],
             "description": "Symfony polyfill for ctype functions",
@@ -880,7 +880,7 @@
                 "polyfill",
                 "portable"
             ],
-            "time": "2019-02-06T07:57:58+00:00"
+            "time": "2019-08-06T08:03:45+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -888,12 +888,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "fe5e94c604826c35a32fa832f35bd036b6799609"
+                "reference": "a874bbf9135bd76175baa2c26d14312c9ef25543"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/fe5e94c604826c35a32fa832f35bd036b6799609",
-                "reference": "fe5e94c604826c35a32fa832f35bd036b6799609",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/a874bbf9135bd76175baa2c26d14312c9ef25543",
+                "reference": "a874bbf9135bd76175baa2c26d14312c9ef25543",
                 "shasum": ""
             },
             "require": {
@@ -905,7 +905,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.11-dev"
+                    "dev-master": "1.12-dev"
                 }
             },
             "autoload": {
@@ -939,39 +939,42 @@
                 "portable",
                 "shim"
             ],
-            "time": "2019-02-06T07:57:58+00:00"
+            "time": "2019-09-17T10:46:08+00:00"
         },
         {
             "name": "twig/twig",
-            "version": "3.x-dev",
+            "version": "2.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "bb3aaec110f2901962ed70afd527b194264d612f"
+                "reference": "c2fd9990fcab344b67a12ead04890a88141d5897"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/bb3aaec110f2901962ed70afd527b194264d612f",
-                "reference": "bb3aaec110f2901962ed70afd527b194264d612f",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/c2fd9990fcab344b67a12ead04890a88141d5897",
+                "reference": "c2fd9990fcab344b67a12ead04890a88141d5897",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2",
+                "php": "^7.1.3",
                 "symfony/polyfill-ctype": "^1.8",
                 "symfony/polyfill-mbstring": "^1.3"
             },
             "require-dev": {
                 "psr/container": "^1.0",
-                "symfony/debug": "^2.7",
-                "symfony/phpunit-bridge": "^3.4.19|^4.1.8|^5.0"
+                "symfony/debug": "^3.4|^4.2",
+                "symfony/phpunit-bridge": "^4.4@dev|^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev"
+                    "dev-master": "2.12-dev"
                 }
             },
             "autoload": {
+                "psr-0": {
+                    "Twig_": "lib/"
+                },
                 "psr-4": {
                     "Twig\\": "src/"
                 }
@@ -988,14 +991,14 @@
                     "role": "Lead Developer"
                 },
                 {
-                    "name": "Armin Ronacher",
-                    "email": "armin.ronacher@active-4.com",
-                    "role": "Project Founder"
-                },
-                {
                     "name": "Twig Team",
                     "homepage": "https://twig.symfony.com/contributors",
                     "role": "Contributors"
+                },
+                {
+                    "name": "Armin Ronacher",
+                    "email": "armin.ronacher@active-4.com",
+                    "role": "Project Founder"
                 }
             ],
             "description": "Twig, the flexible, fast, and secure template language for PHP",
@@ -1003,14 +1006,14 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2019-06-25T10:53:52+00:00"
+            "time": "2019-09-20T12:53:54+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "oxil/kinicart": 20
+        "oxil/kiniauth": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

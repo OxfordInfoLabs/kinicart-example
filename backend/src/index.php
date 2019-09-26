@@ -1,6 +1,6 @@
 <?php
 
-use Kinicart\Init;
+use Kiniauth\Init;
 
 // Include the vendor autoload.
 include_once "../vendor/autoload.php";

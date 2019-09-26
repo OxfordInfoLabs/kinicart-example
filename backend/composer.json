@@ -1,6 +1,6 @@
 {
   "require": {
-    "oxil/kinicart": "dev-master"
+    "oxil/kiniauth": "dev-master"
   },
   "minimum-stability": "dev",
   "config": {
@@ -10,7 +10,7 @@
   },
   "scripts": {
     "serve": "php -S 127.0.0.1:5000 -t src",
-    "clean-database": "Kinicart\\DB\\DBInstaller::runFromComposer",
-    "test-data": "Kinicart\\Test\\TestData\\TestDataInstaller::runFromComposer"
+    "clean-database": "Kiniauth\\DB\\DBInstaller::runFromComposer",
+    "test-data": "Kiniauth\\Test\\TestData\\TestDataInstaller::runFromComposer"
   }
 }
