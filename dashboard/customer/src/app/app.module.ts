@@ -3,15 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MatButtonModule } from "@angular/material/button";
-import { MatIconModule } from "@angular/material/icon";
-import { MatListModule } from "@angular/material/list";
-import { MatSidenavModule } from "@angular/material/sidenav";
-import { MatToolbarModule } from "@angular/material/toolbar";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { NgKinicartModule } from 'ng-kinicart';
-import { AccountSummaryComponent } from './views/account-summary/account-summary.component';
-import { LoginComponent } from './views/login/login.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AccountSummaryComponent } from './account-summary/account-summary.component';
+import { LoginComponent } from './login/login.component';
+import { SessionInterceptor } from './session.interceptor';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { NgKiniAuthModule } from 'ng-kiniauth';
+
 
 @NgModule({
     declarations: [
@@ -28,10 +31,17 @@ import { LoginComponent } from './views/login/login.component';
         MatListModule,
         MatToolbarModule,
         MatButtonModule,
-        NgKinicartModule
+        NgKiniAuthModule.forRoot({
+            guestHttpURL: 'http://localhost:5000/guest',
+            accessHttpURL: 'http://localhost:5000/customer'
+        })
     ],
     providers: [
-
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: SessionInterceptor,
+            multi: true
+        }
     ],
     bootstrap: [AppComponent]
 })

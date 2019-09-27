@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AccountSummaryComponent } from './views/account-summary/account-summary.component';
-import { LoginComponent } from './views/login/login.component';
-import { AuthGuard } from './auth.guard';
+import { AccountSummaryComponent } from './account-summary/account-summary.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
     {
@@ -10,9 +9,8 @@ const routes: Routes = [
         component: LoginComponent
     },
     {
-        path: 'account',
-        component: AccountSummaryComponent,
-        canActivate: [AuthGuard]
+        path: 'account-summary',
+        component: AccountSummaryComponent
     },
     {
         path: '**',
