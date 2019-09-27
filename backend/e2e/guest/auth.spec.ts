@@ -12,7 +12,7 @@ describe('Test Authentication from Guest Web Service', function () {
 
     it("Should be able to log in correctly and get session back", function () {
         browser.get("/guest/auth/login?emailAddress=sam@samdavisdesign.co.uk&password=password");
-        expect(pageContent()).toEqual(1);
+        expect(pageContent()).toEqual("LOGGED_IN");
         browser.get("/guest/session");
         pageContent().then(result => {
             expect(result.user.name).toEqual("Sam Davis");
