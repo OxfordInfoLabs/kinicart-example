@@ -1,0 +1,160 @@
+.flex1
+  flex: 1
+
+.flex100
+  flex-basis: 100%
+
+
+
+/* Grid */
+
+.row
+  display: flex
+  flex-wrap: wrap
+  // justify-content: space-between
+  
+
+
+// .col 
+//   flex: 1
+
+
+$widths: 10 10%, 12 12%, 15 15%, 16 16%, 20 20%, 25 25%, 33 33.33%, 40 40%, 44 44%, 50 50%,60 60%, 66 66.67%, 75 75%, 80 80%
+
+.w
+  width: 100%
+  box-sizing: border-box
+  @each $i in $widths
+    &-#{nth($i, 1)}
+      width: 100%
+  @media screen and (min-width: $tablet-width)
+    @each $i in $widths
+      &-#{nth($i, 1)}
+        width: nth($i, 2)
+  @media screen and (min-width: $site-width)
+    @each $i in $widths
+      &-#{nth($i, 1)}l
+        width: nth($i, 2)
+
+
+
+
+
+.col
+  width: 100%
+  box-sizing: border-box
+  // &._25
+  //   flex-basis: 100%
+  // &._33 
+  //   flex-basis: 100%
+  // &._50
+  //   flex-basis: 100%
+  // &._66
+  //   flex-basis: 100%
+  // &._75
+  //   flex-basis: 100%
+  // &._w100
+  //   flex-basis: 100%
+
+@media screen and (min-width: $tablet-width) 
+  .row
+    flex-wrap: nowrap
+  .col
+    &._11 
+      width: 11%
+    
+    &._15 
+      width: 15%
+    
+    &._16 
+      width: 16%
+    &._20
+      width: 20%
+    &._24 
+      width: 24%
+    
+    &._25 
+      width: 25%
+    
+    &._33 
+      width: 33%
+    
+    &._50 
+      width: 50%
+    
+    &._66 
+      width: 66%
+    
+    &._75 
+      width: 75%
+  
+.flex
+  display: flex
+
+.flex-row
+  flex-direction: row
+
+
+.flexrr
+  flex-direction: row-reverse
+
+.flex-col
+  flex-direction: column
+
+.flex-wrap
+  flex-wrap: wrap
+
+.flex-col-sm
+  @media screen and (max-width: $max-mobile-width)
+    flex-direction: column
+
+.flex-wrap-sm
+  flex-wrap: wrap
+  @media screen and (min-width: $tablet-width)
+    flex-wrap: nowrap
+
+.grid
+  max-width: $site-width
+  margin: 0 auto
+
+.align-start
+  align-items: flex-start
+  
+.align-center
+  align-items: center
+  
+.align-end
+  align-items: flex-end
+
+.align-around
+  align-content: space-around
+
+.justify-between
+  justify-content: space-between
+
+.justify-start
+  justify-content: flex-start
+
+.justify-center
+  justify-content: center
+  
+
+  
+.justify-end
+  justify-content: flex-end
+  
+
+
+.justify-start-sm-center
+  justify-content: center
+  @media screen and (min-width: $tablet-width) 
+      justify-content: flex-start
+  
+.justify-around
+  justify-content: space-around
+  
+
+.flex1
+  flex: 1
+
+
