@@ -1,16 +1,16 @@
 {
   "require": {
-    "oxil/kiniauth": "dev-master"
+    "oxil/kiniauth": "dev-master",
+    "oxil/kinicart": "dev-master"
   },
   "minimum-stability": "dev",
   "config": {
     "process-timeout": 0,
-    "source-directory": "src",
-    "test-directory": "test"
+    "source-directory": "src"
   },
   "scripts": {
     "serve": "php -S 127.0.0.1:5000 -t src",
-    "clean-database": "Kiniauth\\DB\\DBInstaller::runFromComposer",
-    "test-data": "Kiniauth\\Test\\TestData\\TestDataInstaller::runFromComposer"
+    "clean-database": "Kinikit\\Persistence\\Tools\\DBInstaller::runFromComposer",
+    "test-data": "Kinikit\\Persistence\\Tools\\TestDataInstaller::runFromComposer"
   }
 }

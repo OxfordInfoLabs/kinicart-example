@@ -1,12 +1,12 @@
 <?php
 
-use Kiniauth\Init;
-
 // Include the vendor autoload.
+use Kinikit\MVC\Routing\Router;
+
 include_once "../vendor/autoload.php";
 
-// Call kiniauth init
-new Init();
+// Invoke the router
+Router::route();
 
 
 
