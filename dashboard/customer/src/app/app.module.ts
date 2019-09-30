@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { SessionInterceptor } from './session.interceptor';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgKiniAuthModule } from 'ng-kiniauth';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -32,8 +33,8 @@ import { NgKiniAuthModule } from 'ng-kiniauth';
         MatToolbarModule,
         MatButtonModule,
         NgKiniAuthModule.forRoot({
-            guestHttpURL: 'http://localhost:5000/guest',
-            accessHttpURL: 'http://localhost:5000/customer'
+            guestHttpURL: `${environment.backendURL}/guest`,
+            accessHttpURL: `${environment.backendURL}/customer`
         })
     ],
     providers: [

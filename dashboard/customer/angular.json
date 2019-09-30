@@ -1,9 +1,9 @@
 {
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "$schema": "../../node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "kiniauth-angular": {
+    "customer": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/kiniauth-angular",
+            "outputPath": "dist/customer",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "kiniauth-angular:build"
+            "browserTarget": "customer:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "kiniauth-angular:build:production"
+              "browserTarget": "customer:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "kiniauth-angular:build"
+            "browserTarget": "customer:build"
           }
         },
         "test": {
@@ -108,7 +108,7 @@
         }
       }
     },
-    "kiniauth-angular-e2e": {
+    "customer-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -117,11 +117,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "kiniauth-angular:serve"
+            "devServerTarget": "customer:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "kiniauth-angular:serve:production"
+              "devServerTarget": "customer:serve:production"
             }
           }
         },
@@ -137,5 +137,5 @@
       }
     }
   },
-  "defaultProject": "kiniauth-angular"
+  "defaultProject": "customer"
 }
