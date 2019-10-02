@@ -26,7 +26,7 @@
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1",
     "ng-kinibind": "0.0.8",
-    "ng-kiniauth": "file:../../../ng-kiniauth/dist/ng-kiniauth"
+    "ng-kiniauth": "0.0.16"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.800.4",

@@ -1,8 +1,7 @@
 {
-  "name": "admin",
-  "version": "0.0.0",
   "scripts": {
-    "install": "cd backend; composer clearcache; composer install; composer update; composer test-data; cd ../dashboard/customer;npm install",
+    "install-all": "cd backend; composer clearcache; composer install; composer update; composer test-data; cd ../dashboard/customer;npm install",
+    "run-all": "",
     "testdata": "cd backend; composer test-data",
     "backend": "cd backend; composer serve",
     "admin": "ng serve admin --port 5001",
@@ -12,46 +11,5 @@
     "e2e": "protractor backend/e2e/conf.js",
     "e2e-customer": "protractor dashboard/customer/e2e/protractor.conf.js",
     "fix-libs": "rm -rf backend/vendor/oxil/kini*; ln -s ../../../../../kinikit/kinikit-core backend/vendor/oxil/;ln -s ../../../../../kinikit/kinikit-mvc backend/vendor/oxil/;ln -s ../../../../../kinikit/kinikit-persistence backend/vendor/oxil/; ln -s ../../../../kinicart backend/vendor/oxil/; ln -s ../../../../kiniauth backend/vendor/oxil/"
-  },
-  "private": true,
-  "dependencies": {
-    "@angular/animations": "^8.0.2",
-    "@angular/cdk": "^8.0.1",
-    "@angular/common": "~8.0.2",
-    "@angular/compiler": "~8.0.2",
-    "@angular/core": "~8.0.2",
-    "@angular/forms": "~8.0.2",
-    "@angular/material": "^8.0.1",
-    "@angular/platform-browser": "~8.0.2",
-    "@angular/platform-browser-dynamic": "~8.0.2",
-    "@angular/router": "~8.0.2",
-    "core-js": "^2.5.4",
-    "axios": "^0.19.0",
-    "ng-kinibind": "0.0.8",
-    "ng-kiniauth": "0.0.16",
-    "rxjs": "~6.5.2",
-    "tslib": "^1.10.0",
-    "zone.js": "~0.9.1"
-  },
-  "devDependencies": {
-    "@angular-devkit/build-angular": "~0.800.4",
-    "@angular/cli": "~8.0.4",
-    "@angular/compiler-cli": "~8.0.2",
-    "@angular/language-service": "~8.0.2",
-    "@types/node": "~8.9.4",
-    "@types/jasmine": "~2.8.8",
-    "@types/jasminewd2": "~2.0.3",
-    "codelyzer": "^5.0.1",
-    "jasmine-core": "~2.99.1",
-    "jasmine-spec-reporter": "~4.2.1",
-    "karma": "~4.0.0",
-    "karma-chrome-launcher": "~2.2.0",
-    "karma-coverage-istanbul-reporter": "~2.0.1",
-    "karma-jasmine": "~1.1.2",
-    "karma-jasmine-html-reporter": "^0.2.2",
-    "protractor": "~5.4.0",
-    "ts-node": "~7.0.0",
-    "tslint": "~5.11.0",
-    "typescript": "~3.4.5"
   }
 }

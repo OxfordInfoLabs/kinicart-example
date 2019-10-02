@@ -13,8 +13,7 @@ services:
 
 install:
   - nvm install 10
-  - npm install
-  - npm run install
+  - npm run install-all
   - webdriver-manager update
 
 script:
