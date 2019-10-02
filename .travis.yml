@@ -13,8 +13,9 @@ services:
 
 install:
   - nvm install 10
+  - npm install
   - npm run install-all
-  - webdriver-manager update
+  - ./node_modules/protractor/node_modules/webdriver-manager/bin/webdriver-manager update
 
 script:
   - npm run e2e
