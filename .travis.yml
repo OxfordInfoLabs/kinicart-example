@@ -18,7 +18,7 @@ install:
   - webdriver-manager update
 
 script:
-  - npm run e2e-travis
+  - npm run e2e
 
 
 notifications:
