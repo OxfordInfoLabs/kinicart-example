@@ -17,7 +17,9 @@ install:
   - npm run install-all
 
 script:
+  - npm run backend &
   - npm run e2e
+  - npm run e2e-customer
 
 
 notifications:
