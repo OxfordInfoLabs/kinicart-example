@@ -12,7 +12,7 @@ services:
   - xvfb
 
 install:
-  - nvm install 8
+  - nvm install 10
   - npm install
   - webdriver-manager update
 
