@@ -10,7 +10,7 @@
     "customer": "cd dashboard/customer && ng serve customer --port 5002",
     "testdata-test": "cd backend; export KINIKIT_CONFIG_FILE=testdata/config.txt.test; composer test-data",
     "deploy-test": "cd backend; gcloud app deploy app.test.yaml",
-    "e2e": "protractor backend/e2e/conf.js",
+    "e2e": "webdriver-manager update; protractor backend/e2e/conf.js",
     "e2e-customer": "protractor dashboard/customer/e2e/protractor.conf.js",
     "fix-libs": "rm -rf backend/vendor/oxil/kini*; ln -s ../../../../../kinikit/kinikit-core backend/vendor/oxil/;ln -s ../../../../../kinikit/kinikit-mvc backend/vendor/oxil/;ln -s ../../../../../kinikit/kinikit-persistence backend/vendor/oxil/; ln -s ../../../../kinicart backend/vendor/oxil/; ln -s ../../../../kiniauth backend/vendor/oxil/"
   },
