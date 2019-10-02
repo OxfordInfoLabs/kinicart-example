@@ -6,14 +6,13 @@ addons:
     packages:
       - google-chrome-stable
 
-language: node_js
-node_js:
-  - 8
+language: php
 
 services:
   - xvfb
 
 install:
+  - nvm install 8
   - npm install
   - webdriver-manager update
 
