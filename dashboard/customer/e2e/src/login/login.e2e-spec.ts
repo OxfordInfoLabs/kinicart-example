@@ -1,7 +1,7 @@
 import { LoginPage } from './login.po';
 import {browser, by} from "protractor";
 
-describe('Application Global Data Is Correct', () => {
+describe('Login Tests', () => {
     let page: LoginPage;
 
     beforeEach(() => {

@@ -2,7 +2,7 @@ import {browser, by} from "protractor";
 import {AccountSummaryPage} from "./account-summary.po";
 import {LoginPage} from "../login/login.po";
 
-describe('Application Global Data Is Correct', () => {
+describe('Account Summary Tests', () => {
     let page: AccountSummaryPage;
 
     beforeEach(() => {
