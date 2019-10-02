@@ -9,6 +9,7 @@ exports.config = {
     capabilities: {
         'browserName': 'chrome'
     },
+    directConnect: true,
     baseUrl: 'http://localhost:5000',
     framework: 'jasmine',
     jasmineNodeOpts: {
