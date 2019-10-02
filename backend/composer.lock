@@ -55,7 +55,7 @@
                 {
                     "name": "Tobias Nyholm",
                     "email": "tobias.nyholm@gmail.com",
-                    "homepage": "https://github.com/Nyholm"
+                    "homepage": "https://github.com/nyholm"
                 }
             ],
             "description": "Common classes for PSR-6 adapters",
@@ -123,7 +123,7 @@
                 {
                     "name": "Tobias Nyholm",
                     "email": "tobias.nyholm@gmail.com",
-                    "homepage": "https://github.com/Nyholm"
+                    "homepage": "https://github.com/nyholm"
                 }
             ],
             "description": "A PSR-6 cache implementation using filesystem. This implementation supports tags",
@@ -173,7 +173,7 @@
                 {
                     "name": "Tobias Nyholm",
                     "email": "tobias.nyholm@gmail.com",
-                    "homepage": "https://github.com/Nyholm"
+                    "homepage": "https://github.com/nyholm"
                 },
                 {
                     "name": "Nicolas Grekas",
@@ -428,12 +428,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OxfordInfoLabs/kiniauth.git",
-                "reference": "22176f187036e3d767973f805b10f97d4167312c"
+                "reference": "d36d898d3f75aba9afbcad3106de4a7939d5a331"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OxfordInfoLabs/kiniauth/zipball/22176f187036e3d767973f805b10f97d4167312c",
-                "reference": "22176f187036e3d767973f805b10f97d4167312c",
+                "url": "https://api.github.com/repos/OxfordInfoLabs/kiniauth/zipball/d36d898d3f75aba9afbcad3106de4a7939d5a331",
+                "reference": "d36d898d3f75aba9afbcad3106de4a7939d5a331",
                 "shasum": ""
             },
             "require": {
@@ -459,7 +459,7 @@
                 "cart",
                 "php"
             ],
-            "time": "2019-10-01T15:13:19+00:00"
+            "time": "2019-09-30T10:59:42+00:00"
         },
         {
             "name": "oxil/kinicart",
@@ -467,12 +467,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OxfordInfoLabs/kinicart.git",
-                "reference": "c15dac8309fbe67036b75d6b0f897606206ecf3a"
+                "reference": "c770805f89b3ed4e7dee0a33735d2bebb2946d15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OxfordInfoLabs/kinicart/zipball/c15dac8309fbe67036b75d6b0f897606206ecf3a",
-                "reference": "c15dac8309fbe67036b75d6b0f897606206ecf3a",
+                "url": "https://api.github.com/repos/OxfordInfoLabs/kinicart/zipball/c770805f89b3ed4e7dee0a33735d2bebb2946d15",
+                "reference": "c770805f89b3ed4e7dee0a33735d2bebb2946d15",
                 "shasum": ""
             },
             "require": {
@@ -493,7 +493,7 @@
                 "cart",
                 "php"
             ],
-            "time": "2019-10-01T15:13:35+00:00"
+            "time": "2019-09-30T14:15:37+00:00"
         },
         {
             "name": "oxil/kinikit-core",
@@ -501,12 +501,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OxfordInfoLabs/kinikit-core.git",
-                "reference": "847deaebacaef13db79a652ce9a861bb989429a8"
+                "reference": "45d0cb1f077fce5a6b500ded38a03d0e5ad799a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OxfordInfoLabs/kinikit-core/zipball/847deaebacaef13db79a652ce9a861bb989429a8",
-                "reference": "847deaebacaef13db79a652ce9a861bb989429a8",
+                "url": "https://api.github.com/repos/OxfordInfoLabs/kinikit-core/zipball/45d0cb1f077fce5a6b500ded38a03d0e5ad799a9",
+                "reference": "45d0cb1f077fce5a6b500ded38a03d0e5ad799a9",
                 "shasum": ""
             },
             "require": {
@@ -535,7 +535,7 @@
                 "php",
                 "webservices"
             ],
-            "time": "2019-10-01T15:12:21+00:00"
+            "time": "2019-09-30T14:14:56+00:00"
         },
         {
             "name": "oxil/kinikit-mvc",
@@ -543,12 +543,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OxfordInfoLabs/kinikit-mvc.git",
-                "reference": "850004284b639bb9c70c811a5248ab1ee2b73fb3"
+                "reference": "0c8cf64c290b1a9197ba2329ba0fa0c89abab41f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OxfordInfoLabs/kinikit-mvc/zipball/850004284b639bb9c70c811a5248ab1ee2b73fb3",
-                "reference": "850004284b639bb9c70c811a5248ab1ee2b73fb3",
+                "url": "https://api.github.com/repos/OxfordInfoLabs/kinikit-mvc/zipball/0c8cf64c290b1a9197ba2329ba0fa0c89abab41f",
+                "reference": "0c8cf64c290b1a9197ba2329ba0fa0c89abab41f",
                 "shasum": ""
             },
             "require": {
@@ -572,7 +572,7 @@
                 "php",
                 "webservices"
             ],
-            "time": "2019-10-01T15:12:39+00:00"
+            "time": "2019-09-30T14:14:35+00:00"
         },
         {
             "name": "oxil/kinikit-persistence",
@@ -580,12 +580,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OxfordInfoLabs/kinikit-persistence.git",
-                "reference": "01de951a9c9c8f9854e60c0b6301f993a7d796ac"
+                "reference": "3f1b897af1be3a3877cd1fbd3c1a89ff416b0c09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OxfordInfoLabs/kinikit-persistence/zipball/01de951a9c9c8f9854e60c0b6301f993a7d796ac",
-                "reference": "01de951a9c9c8f9854e60c0b6301f993a7d796ac",
+                "url": "https://api.github.com/repos/OxfordInfoLabs/kinikit-persistence/zipball/3f1b897af1be3a3877cd1fbd3c1a89ff416b0c09",
+                "reference": "3f1b897af1be3a3877cd1fbd3c1a89ff416b0c09",
                 "shasum": ""
             },
             "require": {
@@ -609,7 +609,7 @@
                 "php",
                 "webservices"
             ],
-            "time": "2019-10-01T15:13:06+00:00"
+            "time": "2019-09-30T11:00:14+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -979,38 +979,35 @@
         },
         {
             "name": "twig/twig",
-            "version": "2.x-dev",
+            "version": "3.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "4625774716e3737580e407a02e53ff4defd3cdfa"
+                "reference": "21033f13485132174b0aefcece47d66923a616a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/4625774716e3737580e407a02e53ff4defd3cdfa",
-                "reference": "4625774716e3737580e407a02e53ff4defd3cdfa",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/21033f13485132174b0aefcece47d66923a616a1",
+                "reference": "21033f13485132174b0aefcece47d66923a616a1",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.0",
+                "php": "^7.2.9",
                 "symfony/polyfill-ctype": "^1.8",
                 "symfony/polyfill-mbstring": "^1.3"
             },
             "require-dev": {
                 "psr/container": "^1.0",
-                "symfony/debug": "^3.4|^4.2",
+                "symfony/debug": "^3.4|^4.2|^5.0",
                 "symfony/phpunit-bridge": "^4.4@dev|^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.12-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Twig_": "lib/"
-                },
                 "psr-4": {
                     "Twig\\": "src/"
                 }
@@ -1042,7 +1039,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2019-10-01T10:31:38+00:00"
+            "time": "2019-09-22T17:18:32+00:00"
         }
     ],
     "packages-dev": [],
