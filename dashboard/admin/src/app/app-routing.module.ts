@@ -1,19 +1,89 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AccountSummaryComponent } from './account-summary/account-summary.component';
-import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './guards/auth.guard';
+import { AccountSummaryComponent } from './views/account-summary/account-summary.component';
+import { LoginComponent } from './views/login/login.component';
+import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { ProductsComponent } from './views/products/products.component';
+import { SettingsComponent } from './views/settings/settings.component';
+import { FeaturesComponent } from './views/products/features/features.component';
+import { PlansComponent } from './views/products/plans/plans.component';
+import { AddOnsComponent } from './views/products/add-ons/add-ons.component';
+import { OverviewComponent } from './views/overview/overview.component';
 
 const routes: Routes = [
     {
         path: '',
-        redirectTo: 'account-summary',
-        pathMatch: 'full'
+        component: DashboardComponent,
+        children: [
+            {
+                path: '',
+                component: OverviewComponent
+            }
+        ]
+    },
+    {
+        path: 'products',
+        component: DashboardComponent,
+        children: [
+            {
+                path: '',
+                component: ProductsComponent
+            },
+            {
+                path: 'features/:identifier',
+                component: FeaturesComponent,
+                data: {
+                    title: 'Features'
+                }
+            },
+            {
+                path: 'plans/:identifier',
+                component: PlansComponent,
+                data: {
+                    title: 'Plans'
+                }
+            },
+            {
+                path: 'add-ons/:identifier',
+                component: AddOnsComponent,
+                data: {
+                    title: 'Add Ons'
+                }
+            }
+        ],
+        canActivate: [AuthGuard],
+        data: {
+            title: 'Products'
+        }
+    },
+    {
+        path: 'settings',
+        component: DashboardComponent,
+        children: [
+            {
+                path: '',
+                component: SettingsComponent
+            }
+        ],
+        canActivate: [AuthGuard],
+        data: {
+            title: 'Settings'
+        }
     },
     {
         path: 'account-summary',
-        component: AccountSummaryComponent,
-        canActivate: [AuthGuard]
+        component: DashboardComponent,
+        children: [
+            {
+                path: '',
+                component: AccountSummaryComponent
+            }
+        ],
+        canActivate: [AuthGuard],
+        data: {
+            title: 'Account Summary'
+        }
     },
     {
         path: 'login',

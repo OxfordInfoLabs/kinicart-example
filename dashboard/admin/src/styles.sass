@@ -1,34 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+$base-font-family: Roboto,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif
 
-*, body
-  font-family: "Open Sans", Helvetica, Arial, sans-serif
-  -webkit-font-smoothing: antialiased
+app-login
+  display: flex
+  align-items: center
+  height: 100vh
 
-
-@import sass/theme
-@import sass/netistrar-font
-@import sass/vars
-@import sass/utils
-@import sass/config
-@import sass/layout
-@import sass/grid
-@import sass/panel
-@import sass/type
-@import sass/colours
-@import sass/menus
-@import sass/forms
-@import sass/borders
-@import sass/margin
-@import sass/padding
-@import sass/order
-@import sass/dragdroplist
-@import sass/buttons
-
-.accent
-  color: mat-color($trade-accent)
-
-.primary
-  color: mat-color($trade-primary)
-
-.warn
-  color: mat-color($trade-warn)
+@import "../../sass/net1/reset"
+@import "sass/colours"
+@import "../../sass/net1/settings"
+@import "../../sass/net1/netistrar-font"
+@import "sass/third-party-modular-scale"
+@import "../../sass/net1/typography"
+@import "../../sass/net1/grid"
+@import "../../sass/net1/layout"
+@import "../../sass/net1/buttons-links"
+@import "../../sass/net1/forms"
+@import "../../sass/net1/forms-extra"
+@import "../../sass/net1/slider"
+@import "../../sass/net1/padding"
+@import "../../sass/net1/margin"
+@import "../../sass/net1/global"
+@import "../../sass/net1/sidemenu"
+@import "../../sass/net1/borders"
+@import "../../sass/net1/img"
+@import "../../sass/panel"

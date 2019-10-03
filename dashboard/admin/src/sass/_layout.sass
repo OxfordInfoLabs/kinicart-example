@@ -1,47 +1,29 @@
+#sidebar
+    width: 300px
+    background-color: #F5F5F5
+    border-right: 1px solid #e1e1e1
+
+#main
+    background-color: #F9F9F9
+    margin-top: 110px
+
+mat-sidenav
+    margin-top: 110px
+    .close-side
+        position: absolute
+        top: 0
+        right: 0
+
+mat-sidenav-container
+    min-height: 100vh
+
 .header
-  box-shadow: 0 0 1px #aaa
+    box-shadow: 0 0 1px #aaa
 
 .content
-  max-width: $site-width
-  margin: 0 auto
-  padding-bottom: 2rem
+    max-width: 1000px
+    margin: 0 auto
+    padding-bottom: 2rem
 
-  &.narrow
-    max-width: $tablet-width
-
-footer
-  background-color: #000000
-  color: white
-
-  .footercontent
-    .footernav
-      a
-        display: inline-block
-        @extend .reverse
-        color: white
-        font-weight: 400
-
-    .footericons
-      @extend .text-small
-      color: #999
-
-      img
-        width: 140px
-        opacity: .6
-
-.tablet-width
-  width: $tablet-width
-
-.form-width
-  width: $form-width
-  @media screen and (max-width: $max-mobile-width)
-    width: auto
-
-.max-site-width
-  //margin: 0 auto
-  max-width: $site-width
-
-.site-width
-  width: $site-width
-  @media screen and (max-width: $max-mobile-width)
-    width: auto
+    &.narrow
+        max-width: 800px

@@ -1,0 +1,24 @@
+<div class="menu-item" [ngClass]="{'sub-items': showVirtual}">
+    <span>
+        Virtual Hosts
+    </span>
+    <mat-icon class="toggle" *ngIf="!showVirtual" (click)="showVirtual = !showVirtual">add</mat-icon>
+    <mat-icon class="toggle" *ngIf="showVirtual" (click)="showVirtual = !showVirtual">remove</mat-icon>
+</div>
+<div class="sub-menu-items" *ngIf="showVirtual">
+    <a [routerLink]="['/products/features/virtual-hosts']">Features</a>
+    <a [routerLink]="['/products/plans/virtual-hosts']">Plans</a>
+    <a [routerLink]="['/products/add-ons/virtual-hosts']">Add Ons</a>
+</div>
+<div class="menu-item" [ngClass]="{'sub-items': showEmail}">
+    <span>
+        Email
+    </span>
+    <mat-icon class="toggle" *ngIf="!showEmail" (click)="showEmail = !showEmail">add</mat-icon>
+    <mat-icon class="toggle" *ngIf="showEmail" (click)="showEmail = !showEmail">remove</mat-icon>
+</div>
+<div class="sub-menu-items" *ngIf="showEmail">
+    <a [routerLink]="['/products/features/email']">Features</a>
+    <a [routerLink]="['/products/plans/email']">Plans</a>
+    <a [routerLink]="['/products/add-ons/email']">Add Ons</a>
+</div>
