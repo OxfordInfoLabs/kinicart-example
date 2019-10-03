@@ -1,4 +1,4 @@
-import {browser, by, element} from 'protractor';
+import {browser, by, element, protractor} from 'protractor';
 
 export class LoginPage {
 
@@ -35,6 +35,10 @@ export class LoginPage {
         this.setEmailAddress("sam@samdavisdesign.co.uk");
         this.setPassword("password");
         this.clickSignIn();
+
+        // Wait until the login screen has disappeared.
+        let EC = protractor.ExpectedConditions;
+        browser.wait(EC.not(EC.presenceOf(element(by.cssContainingText("h1", "Login")))));
     }
 
 

@@ -15,10 +15,9 @@ install:
   - nvm install 10
   - npm install
   - npm run install-all
+  - npm run backend &
 
 script:
-  - npm run backend &
-  - npm run e2e
   - npm run e2e-customer
 
 
