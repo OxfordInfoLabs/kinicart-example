@@ -1,0 +1,76 @@
+table
+	th, td 
+		padding: .5rem
+	th 
+		text-align: left
+		vertical-align: top
+
+
+
+.tab
+	.tr
+		display: flex
+		flex-direction: column
+		flex-wrap: nowrap
+		width: 100%
+		.td
+			flex: 1
+			vertical-align: top
+			position: relative
+		.tw
+			display: flex
+			flex-direction: row
+
+		&.thead, &.tfoot
+			.tabular-content
+				font-weight: bold
+
+	&.simple-lines
+		.tr
+			border-bottom: 1px solid #e0e0e0
+			border-collapse: collapse
+			padding-top: 2px
+
+	&.solid-grid
+		.td
+			border-top: 1px solid #e0e0e0
+			border-left: 1px solid #e0e0e0
+			padding: 2px
+			&:last-child
+				border-right: 1px solid #e0e0e0
+		.tr:last-child
+			.td
+				border-bottom: 1px solid #e0e0e0
+
+	&.dashed-grid
+		.td
+			border-top: 1px dashed #e0e0e0
+			border-left: 1px dashed #e0e0e0
+			padding: 2px
+			&:last-child
+				border-right: 1px dashed #e0e0e0
+		.tr:last-child
+			.td
+				border-bottom: 1px dashed #e0e0e0
+
+
+@media all and (min-width: 801px)
+	.tab
+		.tr
+			flex-direction: row
+
+
+.tabular-content
+	outline: none
+	width: 100%
+	height: 100%
+	a 
+		overflow-wrap: break-word
+		word-wrap: break-word
+		-ms-word-break: break-all
+		word-break: break-all
+		word-break: break-word
+		-ms-hyphens: auto
+		-moz-hyphens: auto
+		-webkit-hyphens: auto
+		hyphens: auto

@@ -4,7 +4,7 @@
   "scripts": {
     "testdata": "cd backend; composer test-data",
     "backend": "cd backend; composer serve",
-    "admin": "ng serve admin --port 5001",
+    "admin": "cd dashboard/admin && ng serve admin --port 5001",
     "customer": "cd dashboard/customer && ng serve customer --port 5002",
     "testdata-test": "cd backend; export KINIKIT_CONFIG_FILE=testdata/config.txt.test; composer test-data",
     "deploy-test": "cd backend; gcloud app deploy app.test.yaml",

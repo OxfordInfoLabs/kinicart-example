@@ -1,0 +1,168 @@
+
+$mobile-max: 799px
+
+@mixin paddingSubUnits($attr-count: 1, $steps: 25, $unit: 'rem')
+
+	@for $i from 1 through $attr-count
+		$attr-value: $steps * $i
+		$value: $attr-value / 100
+		.pt0#{$attr-value}
+			padding-top: #{$value}#{$unit}
+		.pr0#{$attr-value}
+			padding-right: #{$value}#{$unit}
+		.pb0#{$attr-value}
+			padding-bottom: #{$value}#{$unit}
+		.pl0#{$attr-value}
+			padding-left: #{$value}#{$unit}
+		.px0#{$attr-value}
+			padding-left: #{$value}#{$unit}
+			padding-right: #{$value}#{$unit}
+		.py0#{$attr-value}
+			padding-top: #{$value}#{$unit}
+			padding-bottom: #{$value}#{$unit}
+		.p0#{$attr-value}
+			padding-top: #{$value}#{$unit}
+			padding-right: #{$value}#{$unit}
+			padding-bottom: #{$value}#{$unit}
+			padding-left: #{$value}#{$unit}
+
+		@media screen and (max-width: $mobile-max)
+			.pt0#{$attr-value}m
+				padding-top: #{$value}#{$unit}
+			.pt0#{$attr-value}m
+				padding-right: #{$value}#{$unit}
+			.pb0#{$attr-value}m
+				padding-bottom: #{$value}#{$unit}
+			.pl0#{$attr-value}m
+				padding-left: #{$value}#{$unit}
+			.px0#{$attr-value}m
+				padding-left: #{$value}#{$unit}
+				padding-right: #{$value}#{$unit}
+			.py0#{$attr-value}m
+				padding-top: #{$value}#{$unit}
+				padding-bottom: #{$value}#{$unit}
+			.p0#{$attr-value}m
+				padding-top: #{$value}#{$unit}
+				padding-right: #{$value}#{$unit}
+				padding-bottom: #{$value}#{$unit}
+				padding-left: #{$value}#{$unit}
+
+		@media screen and (min-width: $tablet-width)
+			.pt0#{$attr-value}w
+				padding-top: #{$value}#{$unit}
+			.pt0#{$attr-value}w
+				padding-right: #{$value}#{$unit}
+			.pb0#{$attr-value}w
+				padding-bottom: #{$value}#{$unit}
+			.pl0#{$attr-value}w
+				padding-left: #{$value}#{$unit}
+			.px0#{$attr-value}w
+				padding-left: #{$value}#{$unit}
+				padding-right: #{$value}#{$unit}
+			.py0#{$attr-value}w
+				padding-top: #{$value}#{$unit}
+				padding-bottom: #{$value}#{$unit}
+			.p0#{$attr-value}w
+				padding-top: #{$value}#{$unit}
+				padding-right: #{$value}#{$unit}
+				padding-bottom: #{$value}#{$unit}
+				padding-left: #{$value}#{$unit}
+
+
+
+@mixin paddingSteps($attr-count: 1, $unit: 'rem')
+	$attr-list: null
+	@for $i from 1 through $attr-count
+		.pt#{$i}
+			padding-top: #{$i}#{$unit}
+		.pr#{$i}
+			padding-right: #{$i}#{$unit}
+		.pb#{$i}
+			padding-bottom: #{$i}#{$unit}
+		.pl#{$i}
+			padding-left: #{$i}#{$unit}
+		.px#{$i}
+			padding-left: #{$i}#{$unit}
+			padding-right: #{$i}#{$unit}
+		.py#{$i}
+			padding-top: #{$i}#{$unit}
+			padding-bottom: #{$i}#{$unit}
+		.p#{$i}
+			padding-top: #{$i}#{$unit}
+			padding-right: #{$i}#{$unit}
+			padding-bottom: #{$i}#{$unit}
+			padding-left: #{$i}#{$unit}
+
+		@media screen and (max-width: $mobile-max)
+			.pt#{$i}m
+				padding-top: #{$i}#{$unit}
+			.pr#{$i}m
+				padding-right: #{$i}#{$unit}
+			.pb#{$i}m
+				padding-bottom: #{$i}#{$unit}
+			.pl#{$i}m
+				padding-left: #{$i}#{$unit}
+			.px#{$i}m
+				padding-left: #{$i}#{$unit}
+				padding-right: #{$i}#{$unit}
+			.py#{$i}m
+				padding-top: #{$i}#{$unit}
+				padding-bottom: #{$i}#{$unit}
+			.p#{$i}m
+				padding-top: #{$i}#{$unit}
+				padding-right: #{$i}#{$unit}
+				padding-bottom: #{$i}#{$unit}
+				padding-left: #{$i}#{$unit}
+
+
+		@media screen and (min-width: $tablet-width)
+			.pt#{$i}w
+				padding-top: #{$i}#{$unit}
+			.pr#{$i}w
+				padding-right: #{$i}#{$unit}
+			.pb#{$i}w
+				padding-bottom: #{$i}#{$unit}
+			.pl#{$i}w
+				padding-left: #{$i}#{$unit}
+			.px#{$i}w
+				padding-left: #{$i}#{$unit}
+				padding-right: #{$i}#{$unit}
+			.py#{$i}w
+				padding-top: #{$i}#{$unit}
+				padding-bottom: #{$i}#{$unit}
+			.p#{$i}w
+				padding-top: #{$i}#{$unit}
+				padding-right: #{$i}#{$unit}
+				padding-bottom: #{$i}#{$unit}
+				padding-left: #{$i}#{$unit}
+
+
+
+
+
+@include paddingSubUnits(3)
+
+@include paddingSteps(4)
+
+.pt0
+	padding-top: 0
+.pr0
+	padding-right: 0
+.pb0
+	padding-bottom: 0
+.pl0
+	padding-left: 0
+.p0
+	padding: 0
+
+@media screen and (max-width: $mobile-max)
+	.pt0m
+		padding-top: 0
+	.pr0m
+		padding-right: 0
+	.pb0m
+		padding-bottom: 0
+	.pl0m
+		padding-left: 0
+	.p0m
+		padding: 0
