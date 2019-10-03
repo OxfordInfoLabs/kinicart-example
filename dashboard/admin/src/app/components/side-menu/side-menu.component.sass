@@ -1,0 +1,38 @@
+.menu-items
+    display: flex
+    flex-direction: column
+    margin-bottom: 2rem
+    .menu-item
+        background-color: white
+        height: 55px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        text-decoration: none
+        color: #333
+        border-bottom: 1px solid #e3e3e3
+        padding: 0 1rem
+        font-weight: 600
+        &:first-of-type
+            border-top: 1px solid #e3e3e3
+        &.sub-items
+            border-bottom-color: white
+        mat-icon
+            color: lightgray
+            &.toggle
+                cursor: pointer
+        small
+            display: block
+            font-weight: 400
+            color: #888
+            line-height: 1
+    .sub-menu-items
+        background-color: white
+        padding: 0 1rem
+        border-bottom: 1px solid #e3e3e3
+        a
+            display: block
+            text-decoration: none
+            color: #333
+            font-weight: normal
+            margin-bottom: .5rem
