@@ -2,14 +2,16 @@
   "name": "admin",
   "version": "0.0.0",
   "scripts": {
+    "install-all": "cd backend; composer clearcache; composer install; composer update; composer test-data; cd ../dashboard/customer;npm install",
+    "run-all": "",
     "testdata": "cd backend; composer test-data",
     "backend": "cd backend; composer serve",
     "admin": "cd dashboard/admin && ng serve admin --port 5001",
     "customer": "cd dashboard/customer && ng serve customer --port 5002",
     "testdata-test": "cd backend; export KINIKIT_CONFIG_FILE=testdata/config.txt.test; composer test-data",
     "deploy-test": "cd backend; gcloud app deploy app.test.yaml",
-    "e2e": "protractor backend/e2e/conf.js",
-    "e2e-travis": "protractor backend/e2e/conf.travis.js",
+    "e2e": "webdriver-manager update; protractor backend/e2e/conf.js",
+    "e2e-customer": "cd dashboard/customer; ng e2e",
     "fix-libs": "rm -rf backend/vendor/oxil/kini*; ln -s ../../../../../kinikit/kinikit-core backend/vendor/oxil/;ln -s ../../../../../kinikit/kinikit-mvc backend/vendor/oxil/;ln -s ../../../../../kinikit/kinikit-persistence backend/vendor/oxil/; ln -s ../../../../kinicart backend/vendor/oxil/; ln -s ../../../../kiniauth backend/vendor/oxil/"
   },
   "private": true,
@@ -26,9 +28,6 @@
     "@angular/router": "~8.0.2",
     "core-js": "^2.5.4",
     "axios": "^0.19.0",
-    "ng-kinibind": "0.0.8",
-    "ng-kiniauth": "file:../ng-kiniauth/dist/ng-kiniauth",
-    "rxjs": "~6.5.2",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
   },

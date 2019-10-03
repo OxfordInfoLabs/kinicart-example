@@ -6,19 +6,19 @@ addons:
     packages:
       - google-chrome-stable
 
-language: node_js
-node_js:
-  - 8
+language: php
 
 services:
   - xvfb
 
 install:
+  - nvm install 10
   - npm install
-  - webdriver-manager update
+  - npm run install-all
+  - npm run backend &
 
 script:
-  - npm run e2e-travis
+  - npm run e2e-customer
 
 
 notifications:
