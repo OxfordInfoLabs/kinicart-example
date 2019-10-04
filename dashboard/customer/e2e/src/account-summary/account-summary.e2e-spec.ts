@@ -25,4 +25,29 @@ describe('Account Summary Tests', () => {
     });
 
 
+    it( "Cannot change email address if invalid password is supplied", () => {
+        page.clickEmailEdit();
+        page.setNewEmailAddress('burger@chips.pizza');
+        page.setEditEmailPassword('How do you do fellow kids? ΩΩΩΩΩΩΩ');
+        page.clickUpdateEmail();
+        expect(page.hasErrorText()).toBeTruthy();
+    });
+
+    it ("Cannot change email address to an invalid email", () => {
+        page.clickEmailEdit();
+        page.setNewEmailAddress('Call me Ishmail');
+        page.setEditEmailPassword('password');
+        page.clickUpdateEmail();
+        expect(page.hasErrorText()).toBeTruthy();
+    })
+
+    it ("Cannot change mobile number if invalid password is supplied", () => {
+        page.clickMobileEdit();
+        page.setNewMoblie('+44 09543 555540');
+        page.setMobilePassword("I'm just a girl who can't say no.");
+        page.clickUpdateMobile();
+        expect(page.hasErrorText()).toBeTruthy();
+    })
+
+
 });
