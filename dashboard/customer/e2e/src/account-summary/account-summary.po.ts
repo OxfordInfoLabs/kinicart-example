@@ -7,7 +7,7 @@ export class AccountSummaryPage {
     }
 
 
-    hasStrongContent(contentString) {
+    hasStrongContentOnSummaryPage(contentString) {
         return browser.isElementPresent(by.cssContainingText("strong", contentString));
     }
 
