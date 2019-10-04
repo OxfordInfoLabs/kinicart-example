@@ -2,7 +2,7 @@
   "name": "admin",
   "version": "0.0.0",
   "scripts": {
-    "install-all": "cd backend; composer clearcache; composer install; composer update; composer test-data; cd ../dashboard/customer;npm install; cd ",
+    "install-all": "cd backend; composer clearcache; composer install; composer update; cd ../dashboard/customer;npm install;",
     "run-all": "",
     "testdata": "cd backend; composer test-data",
     "backend": "cd backend; composer serve",

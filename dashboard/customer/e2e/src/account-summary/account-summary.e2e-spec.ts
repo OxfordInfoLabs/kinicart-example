@@ -1,11 +1,19 @@
 import {browser, by} from "protractor";
 import {AccountSummaryPage} from "./account-summary.po";
 import {LoginPage} from "../login/login.po";
+import {TestData} from "../tools/test-data";
 
 describe('Account Summary Tests', () => {
     let page: AccountSummaryPage;
+    let firstTime = true;
 
+    // Make sure we are logged in clean before each test
     beforeEach(() => {
+
+        if (firstTime) {
+            firstTime = false;
+            new TestData().run();
+        }
 
         page = new AccountSummaryPage();
 
@@ -25,7 +33,7 @@ describe('Account Summary Tests', () => {
     });
 
 
-    it( "Cannot change email address if invalid password is supplied", () => {
+    it("Cannot change email address if invalid password is supplied", () => {
         page.clickEmailEdit();
         page.setNewEmailAddress('burger@chips.pizza');
         page.setEditEmailPassword('How do you do fellow kids? ΩΩΩΩΩΩΩ');
@@ -50,7 +58,7 @@ describe('Account Summary Tests', () => {
     // })
 
 
-    it ("Can change mobile to a valid mobile", () => {
+    it("Can change mobile to a valid mobile", () => {
         page.clickMobileEdit();
         page.setNewMoblie('01189998819991197253');
         page.setMobilePassword('password');
@@ -59,7 +67,7 @@ describe('Account Summary Tests', () => {
         expect(page.hasStrongContentOnSummaryPage("01189998819991197253")).toBeTruthy();
     })
 
-    it ("Can change email to a valid email", () => {
+    it("Can change email to a valid email", () => {
         page.clickEmailEdit();
         page.setNewEmailAddress('alt@samdavisdesign.co.uk');
         page.setEditEmailPassword('password');
