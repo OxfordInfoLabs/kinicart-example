@@ -1,0 +1,59 @@
+@import "../sass/colours"
+.toolbars
+    position: fixed
+    top: 0
+    z-index: 99
+    left: 0
+    right: 0
+    .main
+        background-color: #24292E
+        color: white
+        padding: 0 1rem
+        display: flex
+        align-items: center
+        justify-content: space-between
+        height: 60px
+        mat-icon
+            color: white
+        h4
+            margin: 0
+            font-weight: normal
+            color: white
+            display: flex
+            span
+                margin-right: .5rem
+                mat-icon
+                    color: map_get($colours, brand-lighter)
+    .secondary
+        background-color: white
+        font-size: .9rem
+        padding: 0 1rem
+        height: 50px
+        border-bottom: 1px solid #e1e1e1
+        display: flex
+        align-items: center
+        justify-content: space-between
+        div:first-of-type
+            .divider
+                margin: 0 .5rem
+        div
+            display: flex
+            align-items: center
+            height: 100%
+        a.link
+            color: #333
+            margin: 0 .5rem
+            padding: 0 .5rem
+            height: 100%
+            box-sizing: border-box
+            display: flex
+            align-items: center
+            text-decoration: none
+            border-bottom: 3px solid white
+            mat-icon
+                margin-right: .3rem
+                font-size: 22px
+                height: 20px
+                width: 20px
+            &.active
+                border-bottom: 3px solid map_get($colours, brand-lighter)

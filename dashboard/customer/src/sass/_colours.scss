@@ -1,0 +1,48 @@
+
+$colours: (
+brand: #052047,
+brand-lighter: #12a6d3,
+grey: #434444,
+green: #024e54,
+orange: #FFB400,
+red: #b00,
+g2: #222222,
+g3: #333333,
+g5: #555555,
+g6: #666666,
+g8: #888888,
+ga: #aaaaaa,
+gc: #cccccc,
+gd: #dddddd,
+ge: #eeeeee,
+gf9: #f9f9f9,
+muted: #aaa,
+black: #040707,
+white: #fff,
+bk: #000,
+rgba40: rgba(0,0,0,.4)
+);
+
+
+
+@each $name, $colour in $colours {
+	.#{$name} {
+		background: $colour;
+}
+	.#{$name}-text {
+		color: $colour;
+}
+}
+
+
+.vector-brand {
+	path {
+		fill: green;
+}
+}
+
+$checkbox-hover: map_get($colours, brand);
+$checkbox-background: map_get($colours, brand-2);
+
+
+
