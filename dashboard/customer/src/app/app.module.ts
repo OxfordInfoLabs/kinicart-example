@@ -28,6 +28,7 @@ import { OverviewComponent } from './views/overview/overview.component';
 import { AccountMenuComponent } from './components/side-menu/menus/account-menu/account-menu.component';
 import { AddressBookComponent } from './views/address-book/address-book.component';
 import { ContactDetailsComponent } from './views/contact-details/contact-details.component';
+import { PaymentMethodsComponent } from './views/payment-methods/payment-methods.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { ContactDetailsComponent } from './views/contact-details/contact-details
         OverviewComponent,
         AccountMenuComponent,
         AddressBookComponent,
-        ContactDetailsComponent
+        ContactDetailsComponent,
+        PaymentMethodsComponent
     ],
     imports: [
         BrowserModule,

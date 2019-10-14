@@ -12,6 +12,7 @@ import { AddOnsComponent } from './views/products/add-ons/add-ons.component';
 import { OverviewComponent } from './views/overview/overview.component';
 import { AddressBookComponent } from './views/address-book/address-book.component';
 import { ContactDetailsComponent } from './views/contact-details/contact-details.component';
+import { PaymentMethodsComponent } from './views/payment-methods/payment-methods.component';
 
 const routes: Routes = [
     {
@@ -100,6 +101,13 @@ const routes: Routes = [
                 component: ContactDetailsComponent,
                 data: {
                     title: 'Contact Details'
+                }
+            },
+            {
+                path: 'payment-methods',
+                component: PaymentMethodsComponent,
+                data: {
+                    title: 'Payment Methods'
                 }
             }
         ],
