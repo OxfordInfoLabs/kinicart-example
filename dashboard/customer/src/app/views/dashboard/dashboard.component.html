@@ -1,0 +1,83 @@
+<div class="toolbars">
+    <div class="main">
+        <h4>
+            <span>
+                <mat-icon>shopping_cart</mat-icon>
+            </span> EXAMPLE CUSTOMER
+        </h4>
+        <div class="flex align-center">
+            <button mat-icon-button (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+
+            <button mat-icon-button>
+                <mat-icon>notifications</mat-icon>
+            </button>
+
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+                <mat-icon>account_circle</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item [routerLink]="['/account-summary']">
+                    <mat-icon>settings</mat-icon>
+                    <span>Account</span>
+                </button>
+                <button mat-menu-item (click)="signOut()">
+                    <mat-icon>exit_to_app</mat-icon>
+                    <span>Logout</span>
+                </button>
+            </mat-menu>
+        </div>
+    </div>
+    <div class="secondary">
+        <div>
+            <div class="breadcrumbs">
+
+                <p class="breadcrumb">
+                    <a class="reverse" [routerLink]="['/']">Dashboard</a>
+                    <mat-icon *ngIf="breadcrumbs && breadcrumbs.length">chevron_right</mat-icon>
+                </p>
+
+                <ng-template ngFor let-breadcrumb [ngForOf]="breadcrumbs" let-last=last let-first="first">
+                    <p [ngClass]="{active: last}" class="breadcrumb">
+                        <a class="reverse" *ngIf="!last" [routerLink]="breadcrumb.url">{{breadcrumb.label.title}}</a>
+                        <span *ngIf="last" [routerLink]="breadcrumb.url">{{breadcrumb.label.title}}</span>
+                        <mat-icon *ngIf="!last">chevron_right</mat-icon>
+                    </p>
+                </ng-template>
+            </div>
+        </div>
+        <div>
+            <a class="link" [routerLink]="['/products']" routerLinkActive="active">
+                <mat-icon>store</mat-icon>
+                Products
+            </a>
+            <a class="link" [routerLink]="['/settings']" routerLinkActive="active">
+                <mat-icon>settings</mat-icon>
+                Settings
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<mat-sidenav-container>
+
+    <mat-sidenav id="sidebar" #sidenav [mode]="mobileQuery.matches ? 'push' : 'side'"
+                 [opened]="!mobileQuery.matches">
+
+        <button mat-icon-button class="close-side" (click)="sidenav.toggle()">
+            <mat-icon>clear</mat-icon>
+        </button>
+
+        <app-side-menu></app-side-menu>
+
+    </mat-sidenav>
+
+    <mat-sidenav-content id="main">
+
+        <router-outlet></router-outlet>
+
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

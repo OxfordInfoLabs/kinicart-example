@@ -10,6 +10,8 @@ import { FeaturesComponent } from './views/products/features/features.component'
 import { PlansComponent } from './views/products/plans/plans.component';
 import { AddOnsComponent } from './views/products/add-ons/add-ons.component';
 import { OverviewComponent } from './views/overview/overview.component';
+import { AddressBookComponent } from './views/address-book/address-book.component';
+import { ContactDetailsComponent } from './views/contact-details/contact-details.component';
 
 const routes: Routes = [
     {
@@ -78,11 +80,32 @@ const routes: Routes = [
             {
                 path: '',
                 component: AccountSummaryComponent
+            },
+            {
+                path: 'address-book',
+                component: AddressBookComponent,
+                data: {
+                    title: 'Address Book'
+                }
+            },
+            {
+                path: 'contact-details',
+                component: ContactDetailsComponent,
+                data: {
+                    title: 'Contact Details'
+                }
+            },
+            {
+                path: 'contact-details/:contactId',
+                component: ContactDetailsComponent,
+                data: {
+                    title: 'Contact Details'
+                }
             }
         ],
         canActivate: [AuthGuard],
         data: {
-            title: 'Account Summary'
+            title: 'My Account'
         }
     },
     {

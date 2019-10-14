@@ -25,6 +25,9 @@ import { FeaturesComponent } from './views/products/features/features.component'
 import { AddOnsComponent } from './views/products/add-ons/add-ons.component';
 import { PlansComponent } from './views/products/plans/plans.component';
 import { OverviewComponent } from './views/overview/overview.component';
+import { AccountMenuComponent } from './components/side-menu/menus/account-menu/account-menu.component';
+import { AddressBookComponent } from './views/address-book/address-book.component';
+import { ContactDetailsComponent } from './views/contact-details/contact-details.component';
 
 
 @NgModule({
@@ -40,7 +43,10 @@ import { OverviewComponent } from './views/overview/overview.component';
         FeaturesComponent,
         AddOnsComponent,
         PlansComponent,
-        OverviewComponent
+        OverviewComponent,
+        AccountMenuComponent,
+        AddressBookComponent,
+        ContactDetailsComponent
     ],
     imports: [
         BrowserModule,

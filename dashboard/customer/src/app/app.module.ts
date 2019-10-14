@@ -9,19 +9,44 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AccountSummaryComponent } from './account-summary/account-summary.component';
-import { LoginComponent } from './login/login.component';
-import { SessionInterceptor } from './session.interceptor';
+import { AccountSummaryComponent } from './views/account-summary/account-summary.component';
+import { LoginComponent } from './views/login/login.component';
+import { SessionInterceptor } from './auth/session.interceptor';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgKiniAuthModule } from 'ng-kiniauth';
 import { environment } from '../environments/environment';
+import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { SideMenuComponent } from './components/side-menu/side-menu.component';
+import { ProductsComponent } from './views/products/products.component';
+import { SettingsComponent } from './views/settings/settings.component';
+import { ProductsMenuComponent } from './components/side-menu/menus/products-menu/products-menu.component';
+import { FeaturesComponent } from './views/products/features/features.component';
+import { AddOnsComponent } from './views/products/add-ons/add-ons.component';
+import { PlansComponent } from './views/products/plans/plans.component';
+import { OverviewComponent } from './views/overview/overview.component';
+import { AccountMenuComponent } from './components/side-menu/menus/account-menu/account-menu.component';
+import { AddressBookComponent } from './views/address-book/address-book.component';
+import { ContactDetailsComponent } from './views/contact-details/contact-details.component';
 
 
 @NgModule({
     declarations: [
         AppComponent,
         AccountSummaryComponent,
-        LoginComponent
+        LoginComponent,
+        DashboardComponent,
+        SideMenuComponent,
+        ProductsComponent,
+        SettingsComponent,
+        ProductsMenuComponent,
+        FeaturesComponent,
+        AddOnsComponent,
+        PlansComponent,
+        OverviewComponent,
+        AccountMenuComponent,
+        AddressBookComponent,
+        ContactDetailsComponent
     ],
     imports: [
         BrowserModule,
@@ -32,10 +57,11 @@ import { environment } from '../environments/environment';
         MatListModule,
         MatToolbarModule,
         MatButtonModule,
+        MatMenuModule,
         NgKiniAuthModule.forRoot({
             guestHttpURL: `${environment.backendURL}/guest`,
             accessHttpURL: `${environment.backendURL}/customer`
-        })
+        }),
     ],
     providers: [
         {

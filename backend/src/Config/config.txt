@@ -7,5 +7,6 @@ search.paths = ../vendor/oxil/kiniauth/src;../vendor/oxil/kinicart/src
 
 db.provider = sqlite3
 db.filename = DB/kinicart-example.db
+db.logFile = DB/db.log
 
 access.control.origin = REFERRER
