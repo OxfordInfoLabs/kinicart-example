@@ -1,0 +1,53 @@
+
+<footer class="bk mb0 flex1 pt2 pb5">
+
+ <div class="grid px1 px2l">
+   <div class="flex-grid flex-row-reverse ">
+     <div class="hidden-md semi white-text text-center pb1">Create an account in less than a minute.</div>
+     <div class="w-25 ">
+       {{if ne (.Page.Param "footercta") false}}<a href="/register/" class="but butgn w">Register a new account</a>{{end}}
+      <p class="brand60-text text-center-sm pt2">Connect with us</p>
+       <p class="f2 text-center-sm"><a href="https://twitter.com/OxfordInfoLabs" class="net-twitter inv brand60-text "></a><a href="https://www.facebook.com/oxiluk/" class="net-facebook brand60-text inv "></a>
+         <a href="https://www.youtube.com/channel/UCEhNJBoZltH2FJ6an27ntIg" class="net-youtube brand60-text inv "></a></p>
+
+     </div>
+     <div class="w-75">
+      <div class="white-text semi hidden-sm pt1 pb3">Get a full developer account in less than a minute.</div>
+       <div class="flex flex-wrap">
+         <div class="w-33 pb2">
+           <p class="brand60-text mb0 text-center-sm">Products</p>
+           {{ $menu := .Site.Menus.products }}
+           {{ partial "simplemenu.html" (dict "page" . "ctx" $ "menu" $menu "css" "pt050 text-center-sm" "linkcss" "brand90-text inv blk pb050") }}
+         </div>
+         <div class="w-33 pb2">
+           <p class="brand60-text mb0 text-center-sm">Hosting</p>
+           {{ $menu := .Site.Menus.hosting }}
+           {{ partial "simplemenu.html" (dict "page" . "ctx" $ "menu" $menu "css" "pt050 text-center-sm" "linkcss" "brand90-text inv blk pb050") }}
+         </div>
+         <div class="w-33 pb2">
+           <p class="brand60-text mb0 text-center-sm">Help</p>
+           {{ $menu := .Site.Menus.help }}
+           {{ partial "simplemenu.html" (dict "page" . "ctx" $ "menu" $menu "css" "pt050 text-center-sm" "linkcss" "brand90-text inv blk pb050") }}
+         </div>
+
+
+
+       </div>
+
+
+     </div>
+
+   </div>
+
+   <div class="flex-grid justify-end">
+     <div ><div class="text-right text-center-sm pt3 pb1 pt0l white-text large">{{.Site.Title}}</div>
+       <p class="brand60-text vsmall text-right text-center-sm mb0 pb025">The Kinicart suite of products is brought to you by Oxford Information Labs. &copy; {{ dateFormat "2006" now }} Oxford Information Labs Limited. All rights reserved.</p>
+       <p class="brand60-text vsmall text-right text-center-sm">Registered office: 37 Market Square, Witney, Oxfordshire OX28 6RE. Registered in England and Wales No. 04520925. VAT No. 799526263</p>
+     </div>
+   </div>
+
+
+ </div>
+
+
+</footer>

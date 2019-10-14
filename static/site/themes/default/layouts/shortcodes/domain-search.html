@@ -1,0 +1,13 @@
+<div class="{{.Get "class"}}">
+<div class="grid grid-medium px1 px6l text-center">
+  {{.Inner}}
+  <form action="/search/" class="flex align-center search-group white mt2">
+
+
+    <input type="text" class="flex1 f4 pl1" name="domainsearch" placeholder="{{with .Get "placeholder"}}{{.}}{{else}}{{ .Site.Params.search_label }}{{end}}">
+    <button type="submit" class="but" style="border-radius: 0 5px 5px 0;">
+      <i class="net-search" ></i>
+    </button>
+  </form>
+</div>
+</div>

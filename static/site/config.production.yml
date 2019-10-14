@@ -1,0 +1,10 @@
+baseURL: "https://oxfordcyber.uk/"
+enableRobotsTXT: "true"
+params:
+  subtitle: "Oxford Cyber - affordable, ultra-secure web technologies."
+  shortTitle: "Oxford Cyber"
+  facebookAppId: "1050980128247748"
+  captchaKey: "6LeqiF8UAAAAAI6Xm-NkpKG9IbvEbU3n4p1VRW4L"
+  ga: "true"
+  ga_code: "UA-30102177-1"
+

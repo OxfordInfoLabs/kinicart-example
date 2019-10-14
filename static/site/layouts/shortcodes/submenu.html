@@ -1,0 +1,13 @@
+{{- $menu := .Site.Menus.main_menu}}
+{{- $linkcss := "hidden-md hidden-sm visible-desktop mr2 inv medium" -}}
+{{- if eq (.Page.Params.theme) "brand" }}
+{{- $linkcss = "hidden-md hidden-sm visible-desktop wh mr2 inv medium" -}}
+{{- end -}}
+
+<div class="grey">
+  <div class="grid px1 px2l py1 ">
+    <div class="flex align-center ">
+      {{- partial "linksmenu.html" (dict "page" .Page "site" .Site  "ctx" $ "css" $linkcss "menu" $menu) }}
+    </div>
+  </div>
+</div>

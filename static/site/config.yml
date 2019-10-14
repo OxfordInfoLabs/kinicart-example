@@ -1,0 +1,51 @@
+baseurl: "/"
+title: "Kinicart Example"
+theme: "default"
+DefaultContentLanguage: "en"
+taxonomies:
+  category: "categories"
+enableRobotsTXT: "false"
+params:
+  subtitle: "Affordable, ultra-secure web technologies."
+  shortTitle: "Home"
+  facebookAppId: "1050980128247748"
+  logo: "oxfordcyber_logo-323x34.png"
+  logo_height: "20"
+  logo_rev: "oxfordcyber_logo_rev-323x34.png"
+  logo_rev_height: "20"
+  logo_mini: "oxfordcyber_logo-323x34.png"
+  logo_mini_height: "20"
+  logo_mini_rev: "oxfordcyber_logo_rev-323x34.png"
+  logo_mini_rev_height: "20"
+menu:
+  main_menu:
+  - name: "Virtual Hosts"
+    url: "/hosting/virtual-hosts/"
+    weight: 5
+  products:
+  - name: "Virtual Hosts"
+    url: "/hosting/virtual-hosts/"
+    weight: 5
+
+  hosting:
+  - name: "Pricing"
+    url: "/hosting/static-websites/"
+    weight: 5
+  - name: "About"
+    url: "/about/"
+    weight: 10
+  - name: "Contact us"
+    url: "/help/contact/contact-details/"
+    weight: 5
+  help:
+  - name: "Documentation"
+    url: "/help/"
+    weight: 5
+  - name: "Developers"
+    url: "/help/"
+    weight: 5
+  - name: "Customer Dashboard"
+    url: "/dashboard/"
+    weight: 5
+
+
