@@ -26,7 +26,12 @@ var closeRowInfoBtn = $(".close-row-info");
 var sidebarBtn = $("#btn-sidebar");
 
 
-new Kiniauth();
+new Kiniauth({
+    endpoint: "http://localhost:5000",
+    elementVisibilityFunction: function (element: Element, visible: boolean) {
+        element.setAttribute("data-state", visible ? "show" : "hide");
+    }
+});
 
 hljs.initHighlightingOnLoad();
 
