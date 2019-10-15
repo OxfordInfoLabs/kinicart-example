@@ -80,7 +80,6 @@
 {{ $script := .Site.Data.webpack.main }}
 {{ with $script.js }}
 <script src="{{ relURL . }}"></script>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 {{ end }}
 {{ end }}
 

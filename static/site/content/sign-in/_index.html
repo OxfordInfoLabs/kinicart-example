@@ -53,10 +53,11 @@ theme: brand
 
             </div>
 
-            <div class="pb2 flex-grid" data-state="hide">
+            <div class="pb2 flex-grid" data-recaptcha-wrapper data-state="hide">
                 <div class="w-40"></div>
                 <div class="flex1">
-                    <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+                    <ka-recaptcha></ka-recaptcha>
+                    <div class="red-text small pt1" data-state="hide" data-recaptcha-error></div>
                 </div>
 
             </div>

@@ -28,6 +28,7 @@ var sidebarBtn = $("#btn-sidebar");
 
 new Kiniauth({
     endpoint: "http://localhost:5000",
+    recaptchaKey: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI",
     elementVisibilityFunction: function (element: Element, visible: boolean) {
         element.setAttribute("data-state", visible ? "show" : "hide");
     }
