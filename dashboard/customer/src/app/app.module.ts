@@ -29,6 +29,7 @@ import { AccountMenuComponent } from './components/side-menu/menus/account-menu/
 import { AddressBookComponent } from './views/address-book/address-book.component';
 import { ContactDetailsComponent } from './views/contact-details/contact-details.component';
 import { PaymentMethodsComponent } from './views/payment-methods/payment-methods.component';
+import { NgKinicartModule } from 'ng-kinicart';
 
 
 @NgModule({
@@ -64,6 +65,10 @@ import { PaymentMethodsComponent } from './views/payment-methods/payment-methods
             guestHttpURL: `${environment.backendURL}/guest`,
             accessHttpURL: `${environment.backendURL}/customer`
         }),
+        NgKinicartModule.forRoot({
+            guestHttpURL: `${environment.backendURL}/guest`,
+            accessHttpURL: `${environment.backendURL}/customer`
+        })
     ],
     providers: [
         {

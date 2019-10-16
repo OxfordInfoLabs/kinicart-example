@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to kiniauth-angular!');
+    expect(page.getTitleText()).toEqual('Welcome to Kinicart Example Customer Dashboard');
   });
 
   afterEach(async () => {
