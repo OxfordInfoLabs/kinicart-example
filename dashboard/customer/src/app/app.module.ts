@@ -30,6 +30,7 @@ import { AddressBookComponent } from './views/address-book/address-book.componen
 import { ContactDetailsComponent } from './views/contact-details/contact-details.component';
 import { PaymentMethodsComponent } from './views/payment-methods/payment-methods.component';
 import { NgKinicartModule } from 'ng-kinicart';
+import { OrderHistoryComponent } from './views/order-history/order-history.component';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { NgKinicartModule } from 'ng-kinicart';
         AccountMenuComponent,
         AddressBookComponent,
         ContactDetailsComponent,
-        PaymentMethodsComponent
+        PaymentMethodsComponent,
+        OrderHistoryComponent
     ],
     imports: [
         BrowserModule,

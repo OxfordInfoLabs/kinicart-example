@@ -11,24 +11,24 @@ label
   flex: 1
   &:last-of-type
     margin-right: 0
-  input, select
-    padding: .6rem 1rem
+input, select
+  padding: .6rem 1rem
+  border: 1px solid #eee
+  margin-top: .3rem
+  background: white
+  height: 45px
+  border-radius: 0
+  font-size: 1rem
+  &.full
+    width: 100%
+  &:hover, &:focus
     border: 1px solid #eee
-    margin-top: .3rem
-    background: white
-    height: 45px
-    border-radius: 0
-    font-size: 1rem
-    &.full
-      width: 100%
-    &:hover, &:focus
-      border: 1px solid #eee
-      outline: 0
-      box-shadow: none
-    &.ng-touched
-      &.ng-invalid
+    outline: 0
+    box-shadow: none
+  &.ng-touched
+    &.ng-invalid
+      box-shadow: 0 0 2px 0 rgba(139,0,0,.5)
+      &:hover, &:focus
+        border: 1px solid #eee
+        outline: 0
         box-shadow: 0 0 2px 0 rgba(139,0,0,.5)
-        &:hover, &:focus
-          border: 1px solid #eee
-          outline: 0
-          box-shadow: 0 0 2px 0 rgba(139,0,0,.5)

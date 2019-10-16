@@ -13,6 +13,7 @@ import { OverviewComponent } from './views/overview/overview.component';
 import { AddressBookComponent } from './views/address-book/address-book.component';
 import { ContactDetailsComponent } from './views/contact-details/contact-details.component';
 import { PaymentMethodsComponent } from './views/payment-methods/payment-methods.component';
+import { OrderHistoryComponent } from './views/order-history/order-history.component';
 
 const routes: Routes = [
     {
@@ -108,6 +109,13 @@ const routes: Routes = [
                 component: PaymentMethodsComponent,
                 data: {
                     title: 'Payment Methods'
+                }
+            },
+            {
+                path: 'order-history',
+                component: OrderHistoryComponent,
+                data: {
+                    title: 'Order History'
                 }
             }
         ],
