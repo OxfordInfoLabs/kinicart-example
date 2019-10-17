@@ -1,16 +1,17 @@
 label
-  display: flex
-  flex-direction: column-reverse
-  align-items: flex-start
-  color: #333
-  font-size: .9rem
-  margin-bottom: 1rem
-  width: 100%
-  margin-right: .5rem
-  min-width: 270px
-  flex: 1
-  &:last-of-type
-    margin-right: 0
+  &:not(.mat-checkbox-layout)
+    display: flex
+    flex-direction: column-reverse
+    align-items: flex-start
+    color: #333
+    font-size: .9rem
+    margin-bottom: 1rem
+    width: 100%
+    margin-right: .5rem
+    min-width: 270px
+    flex: 1
+    &:last-of-type
+      margin-right: 0
 input, select
   padding: .6rem 1rem
   border: 1px solid #eee
