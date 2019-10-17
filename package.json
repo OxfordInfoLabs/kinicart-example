@@ -31,7 +31,7 @@
     "moment": "^2.24.0",
     "ng-kiniauth": "0.0.20",
     "ng-kinibind": "0.0.8",
-    "ng-kinicart": "0.0.12",
+    "ng-kinicart": "0.0.13",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
