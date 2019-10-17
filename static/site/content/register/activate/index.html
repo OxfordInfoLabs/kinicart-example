@@ -1,0 +1,59 @@
+---
+title: "Account activation"
+date: "2019-01-22T11:27:34Z"
+description: ""
+tags: []
+categories: []
+noindex: "true"
+theme: "brand"
+
+---
+
+
+<div class="black white-text">
+    <div class="px1 px2l text-center pt1 pb3 ">
+        <h1 class="f2 normal white-text pb1"><i class="net-check"></i> Account activation</h1>
+        <div class="grid grid-small ge-text f5 thin px1 text-center lh12">Enter the 16 digit code sent to your email address to activate your account.</div>
+    </div>
+
+
+</div>
+
+<div class="grid grid-small white my4 px1 px2l">
+
+
+    <form data-2fa>
+
+        <div class="pb2 flex-grid ">
+            <div class="w-40">
+                <label class="text-right-lg blk pr4l bold pb050 pb025l" for="2fa">Enter the 16 digit activation code sent to your email address</label>
+            </div>
+            <div class="flex1">
+                <input id="2fa" name="2fa" type="text" class="bor1 gf9 py050 px050 w"
+                       data-2fa-field
+                       placeholder="e.g. EASFDFG334564645" autocomplete="username"
+                       style="margin-bottom: 0;">
+
+                <p class="red-text small" data-state="hide" data-2fa-error></p>
+                <p class="red-text small" data-state="hide" data-general-error></p>
+            </div>
+
+        </div>
+
+
+        <div class="flex-grid ">
+            <div class="w-40"></div>
+            <div class="flex1">
+                <div class="flex-grid align-center">
+                    <button type="submit" class="but butgn chevron-right login-action" model="loginStatus">Activate my account
+                    </button>
+                </div>
+                <div class="red-text" data-state="hide"></div>
+
+            </div>
+
+        </div>
+
+    </form>
+
+</div>

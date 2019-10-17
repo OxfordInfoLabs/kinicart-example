@@ -24,95 +24,98 @@ theme: brand
 
 <div class="grid grid-desktop white my4 px1 px2l">
 
-    <ka-register-form>
+    <ka-register data-activation-url="/register/activate" data-success-url="/register/activated">
 
-        <div class="pb2 pb1l flex-grid ">
-            <div class="w-40">
-                <label class="text-right-lg blk pr4l bold pb050 pb025l" for="email">What's your email address?</label>
-                <p class="vsmall g8-text pr4l text-right-lg ">We'll use this as the only authoritative email address for
-                    this account.</p>
-            </div>
-            <div class="flex1">
-                <input id="email" type="email" class="email-field bor1 gf9 py050 px050 w"
-                       data-email-field
-                       placeholder="e.g. maria@mydomain.uk" autocomplete="false"
-                       style="margin-bottom: 0;">
-                <div class="red-text pb1" data-state="hide" data-email-error></div>
-            </div>
+        <form data-register>
 
-        </div>
-        <div class="pb2 pb1l flex-grid">
-            <div class="w-40">
-                <label class="text-right-lg blk pr4l bold pb050 pb025l" for="username">Enter a name for the
-                    account</label>
-                <p class="vsmall g8-text pr4l text-right-lg">This is your personal name or company, group or
-                    organisation. You can change this if needed.</p>
-            </div>
-            <div class="flex1">
-                <input type="text" class="username-field bor1 gf9 py050 px050 w" title="No spaces or special characters"
-                       pattern="[A-Za-z0-9]+"
-                       placeholder="e.g. My Company Ltd" data-name-field autocomplete="false">
-                <div class="red-text pb1" data-state="hide" data-name-error></div>
-            </div>
-
-        </div>
-        <div class="pb2 pb1l flex-grid">
-            <div class="w-40">
-
-                <label for="password" class="text-right-lg blk pr4l bold pb050 pb025l">Choose a password</label>
-                <p class="vsmall g8-text pr4l text-right-lg">This you will use to login into your account, and admin
-                    dashboard.</p>
-            </div>
-            <div class="flex1">
-                <input id="password" class="password-field bor1 gf9 py050 px050 w" type="password"
-                       placeholder="**********" data-password-field autocomplete="new-password">
-                <div class="red-text pb1" data-state="hide" data-password-error></div>
-            </div>
-
-        </div>
-        <div class="pb2 flex-grid" data-state="hide">
-            <div class="w-40"></div>
-            <div class="flex1">
-                <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
-            </div>
-
-        </div>
-
-        <div class="flex-grid">
-            <div class="w-40"></div>
-            <div class="flex1">
-                <label class="rcheck mb2">I agree to be bound by the&nbsp;<a href="/terms/">Terms and
-                    Conditions</a> and <a href="/privacy/">Privacy Policy</a>.
-                    <input type="checkbox" checked="checked" data-accept-terms>
-                    <span class="checkmark"></span>
-                </label>
-                <label class="rcheck"><b>Sign me up for the mailing list.</b>
-
-                    <input type="checkbox">
-                    <span class="checkmark"></span>
-                </label>
-            </div>
-
-
-        </div>
-        <div class="flex-grid ">
-            <div class="w-40"></div>
-            <div class="flex1">
-                <div class="pt2">
-                    <button type="submit" class="submit-button but butgn chevron-right w">Start using Oxford Cyber
-                        products now
-                    </button>
+            <div class="pb2 pb1l flex-grid ">
+                <div class="w-40">
+                    <label class="text-right-lg blk pr4l bold pb050 pb025l" for="email">What's your email
+                        address?</label>
+                    <p class="vsmall g8-text pr4l text-right-lg ">We'll use this as the only authoritative email address
+                        for
+                        this account.</p>
                 </div>
-                <div class="red-text" data-state="hide" data-general-error>An error occurred during registration, please
-                    try again later.
+                <div class="flex1">
+                    <input id="email" type="email" class="email-field bor1 gf9 py050 px050 w"
+                           data-email-field
+                           placeholder="e.g. maria@mydomain.uk" autocomplete="false"
+                           style="margin-bottom: 0;">
+                    <div class="red-text pb1" data-state="hide" data-email-error></div>
                 </div>
-                <div class="pt2 ">Have an account?&nbsp;<a class="inverse" href="/sign-in/">Sign in</a>.</div>
+
+            </div>
+            <div class="pb2 pb1l flex-grid">
+                <div class="w-40">
+                    <label class="text-right-lg blk pr4l bold pb050 pb025l" for="username">Enter a name for the
+                        account</label>
+                    <p class="vsmall g8-text pr4l text-right-lg">This is your personal name or company, group or
+                        organisation. You can change this if needed.</p>
+                </div>
+                <div class="flex1">
+                    <input type="text" class="username-field bor1 gf9 py050 px050 w"
+                           placeholder="e.g. My Company Ltd" data-name-field autocomplete="false">
+                    <div class="red-text pb1" data-state="hide" data-name-error></div>
+                </div>
+
+            </div>
+            <div class="pb2 pb1l flex-grid">
+                <div class="w-40">
+
+                    <label for="password" class="text-right-lg blk pr4l bold pb050 pb025l">Choose a password</label>
+                    <p class="vsmall g8-text pr4l text-right-lg">This you will use to login into your account, and admin
+                        dashboard.</p>
+                </div>
+                <div class="flex1">
+                    <input id="password" class="password-field bor1 gf9 py050 px050 w" type="password"
+                           placeholder="**********" data-password-field autocomplete="new-password">
+                    <div class="red-text pb1" data-state="hide" data-password-error></div>
+                </div>
+
+            </div>
+            <div class="pb2 flex-grid">
+                <div class="w-40"></div>
+                <div class="flex1">
+                    <ka-recaptcha data-autoshow></ka-recaptcha>
+                    <div class="red-text small pt1" data-state="hide" data-recaptcha-error></div>
+                </div>
+
             </div>
 
-        </div>
+            <div class="flex-grid">
+                <div class="w-40"></div>
+                <div class="flex1">
+                    <label class="rcheck mb2">I agree to be bound by the&nbsp;<a href="/terms/">Terms and
+                        Conditions</a> and <a href="/privacy/">Privacy Policy</a>.
+                        <input type="checkbox" checked="checked" data-accept-field>
+                        <span class="checkmark"></span>
+                        <div class="red-text pb1" data-state="hide" data-accept-error></div>
+                    </label>
+                    <!--                <label class="rcheck"><b>Sign me up for the mailing list.</b>-->
+
+                    <!--                    <input type="checkbox">-->
+                    <!--                    <span class="checkmark"></span>-->
+                    <!--                </label>-->
+                </div>
 
 
-    </ka-register-form>
+            </div>
+            <div class="flex-grid ">
+                <div class="w-40"></div>
+                <div class="flex1">
+                    <div class="pt2">
+                        <button type="submit" class="submit-button but butgn chevron-right w">Create account
+                        </button>
+                    </div>
+                    <div class="red-text" data-state="hide" data-general-error></div>
+                    <div class="pt2 ">Have an account?&nbsp;<a class="inverse" href="/sign-in/">Sign in</a>.</div>
+                </div>
+
+            </div>
+
+        </form>
+
+    </ka-register>
 
 
 </div>
