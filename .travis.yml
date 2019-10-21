@@ -12,9 +12,11 @@ install:
   - npm install
   - npm run install-all
   - npm run backend &
+  - npm run static &
 
 script:
   - npm run e2e-customer
+  - npm run e2e-static
 
 
 notifications:
