@@ -28,6 +28,9 @@ import { OverviewComponent } from './views/overview/overview.component';
 import { AccountMenuComponent } from './components/side-menu/menus/account-menu/account-menu.component';
 import { AddressBookComponent } from './views/address-book/address-book.component';
 import { ContactDetailsComponent } from './views/contact-details/contact-details.component';
+import { PaymentMethodsComponent } from './views/payment-methods/payment-methods.component';
+import { NgKinicartModule } from 'ng-kinicart';
+import { OrderHistoryComponent } from './views/order-history/order-history.component';
 
 
 @NgModule({
@@ -46,7 +49,9 @@ import { ContactDetailsComponent } from './views/contact-details/contact-details
         OverviewComponent,
         AccountMenuComponent,
         AddressBookComponent,
-        ContactDetailsComponent
+        ContactDetailsComponent,
+        PaymentMethodsComponent,
+        OrderHistoryComponent
     ],
     imports: [
         BrowserModule,
@@ -60,8 +65,12 @@ import { ContactDetailsComponent } from './views/contact-details/contact-details
         MatMenuModule,
         NgKiniAuthModule.forRoot({
             guestHttpURL: `${environment.backendURL}/guest`,
-            accessHttpURL: `${environment.backendURL}/customer`
+            accessHttpURL: `${environment.backendURL}/account`
         }),
+        NgKinicartModule.forRoot({
+            guestHttpURL: `${environment.backendURL}/guest`,
+            accessHttpURL: `${environment.backendURL}/customer`
+        })
     ],
     providers: [
         {

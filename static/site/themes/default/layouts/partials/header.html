@@ -1,0 +1,87 @@
+
+
+{{.Scratch.Set "theme" "default"}}
+
+
+{{with .CurrentSection}}
+{{with .Param "theme"}}
+{{$.Scratch.Set "theme" .}}
+{{end}}
+{{end}}
+
+<header  class="pr1 py1 {{ if eq (.Scratch.Get "theme") "brand" }}brand{{end}}">
+
+  <net-session>
+
+
+      <div class="grid flex px1 px2l justify-between align-center">
+
+        <div class="flex align-center flex1 ">
+          <div class="flex align-center"><a class="flex align-center inverse mr050" href="{{ "/" | relLangURL }}" id="btn-brand">
+                       </a>
+
+          </div>
+          <div class="flex flex1 justify-end align-center ">
+              {{- $menu := .Site.Menus.top_bar}}
+              {{- $linkcss := "hidden-md hidden-sm visible-desktop mr2 inv medium" -}}
+              {{- if eq (.Scratch.Get "theme") "brand" }}
+                {{- $linkcss = "hidden-md hidden-sm visible-desktop wh mr2 inv medium" -}}
+              {{- end -}}
+              {{- partial "linksmenu.html" (dict "page" . "site" .Site  "ctx" $ "css" $linkcss "menu" $menu) }}
+
+
+
+          </div>
+        </div>
+
+        <div class="flex align-center justify-end">
+          {{partial "login-logout" .}}
+
+
+          <a net-show="info.cartItems" href="/cart/" class="btn-cart butlk inv mr075 rel {{ if eq (.Scratch.Get "theme") "brand" }}white-text{{end}}" data-state="hide" ><i class="net-cart-solid f4 mr050"></i><span  class="counter counter-sm">{info.cartItems}</span></a>
+          <button id="btn-sidebar" class="butlk pr050 inv {{ if eq (.Scratch.Get "theme") "brand" }}white-text{{end}}" data-target="show"><i class="net-menu-alt f3"></i></button>
+        </div>
+      </div>
+
+
+    {{if eq .RelPermalink "/search/"}}
+    <div class=" pt1 px1 px2l grid flex align-center flex-wrap" >
+      <div class="flex align-center hidden-sm mr1 {{ if eq (.Scratch.Get "theme") "brand" }}white-text{{end}}"><span>{{.Params.search_strap}}</span></div>
+      <div class="w-33 ">
+        {{partial "searchbox-sm" .}}
+      </div>
+      <div class="w-20 ml050l mt1 mt0l"><a href="/cart/" class="but butor butsm butfullsm" style="border-width:1px;">View cart <i
+          class="net-chevron-right"></i></a></div>
+    </div>
+    {{end}}
+
+    {{if eq (.FirstSection.Permalink) "/help/"}}{{ if ne (.CurrentSection.Permalink) "/help/" }}
+    <div class=" pt1 px1 px2l grid flex align-center" >
+      <div class="flex align-center hidden-sm mr1 {{ if eq (.Scratch.Get "theme") "brand" }}white-text{{end}}"><span>{{.FirstSection.Params.search_strap}}</span></div>
+      <div class="w-33 ">
+        {{ partial "help/search-header" .}}
+      </div>
+
+    </div>
+    {{end}}{{end}}
+
+    {{if eq (.FirstSection.Title | urlize) "test"}}
+    <div id="searchtools" class=" pt1 px1 px2l grid grid-big flex align-center flex-wrap flex-row-reverse justify-end" >
+      <div class="w-33 mb050 mb0l">
+        {{partial "searchbox-sm" .}}
+      </div>
+      <div class="flex align-center hidden-sm mr1l "  style="display:none;"><span class="pr050" >Your filters: National, Design, Art</span> <button class="filtersclose butlk inv flex align-center">cancel <i class="net-close"></i></button></div>
+      <div class="flex w-sm align-center justify-between-sm pl1 pl0l mr1l"><span class="small-sm">Your search: <b>mybusiness.com</b> &bullet; Popular</span><button class="butlk inv flex align-center ml1">Filters <i class="net-chevron-down"></i></button></div>
+    </div>
+    {{end}}
+<!--    <div class="px1 px2l small flex align-center hidden-md" style="display:none;"><span class="pr050" >Your filters: National, Design, Art</span> <button class="filtersclose butlk inv ">cancel <i class="net-close"></i></button></div>-->
+{{partial "blognews" .}}
+    {{ partial "login" . }}
+    {{ partial "logout" . }}
+
+  </net-session>
+
+</header>
+
+
+

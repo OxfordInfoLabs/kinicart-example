@@ -1,0 +1,121 @@
+---
+title: 'Register'
+date: '2018-11-19T11:28:01Z'
+description: 'Register an account with Netistrar, the UK Domain Name Registrar specialising in wholesale domain names and web services at trade prices'
+tags: []
+categories: []
+menu: ""
+noindex: 'true'
+theme: brand
+
+---
+
+
+<!--<div class="flex justify-center">-->
+<!--<div class="brand ib px1 py150">-->
+<!--<img src="/images/netistrar-white.svg" height="40" alt="Netistrar white logo">-->
+<!--</div>-->
+<!--</div>-->
+<div class="black white-text pt1 pb3 px1 px2l"><h1 class="f2 normal text-center white-text pb1">Register with Kinicart
+    Example</h1>
+    <div class="ge-text f5 thin px1 text-center">Safe, reliable, UK web services and domains.</div>
+</div>
+
+
+<div class="grid grid-desktop white my4 px1 px2l">
+
+    <ka-register data-activation-url="/register/activate" data-success-url="/register/activated">
+
+        <form data-register>
+
+            <div class="pb2 pb1l flex-grid ">
+                <div class="w-40">
+                    <label class="text-right-lg blk pr4l bold pb050 pb025l" for="email">What's your email
+                        address?</label>
+                    <p class="vsmall g8-text pr4l text-right-lg ">We'll use this as the only authoritative email address
+                        for
+                        this account.</p>
+                </div>
+                <div class="flex1">
+                    <input id="email" type="email" class="email-field bor1 gf9 py050 px050 w"
+                           data-email-field
+                           placeholder="e.g. maria@mydomain.uk" autocomplete="false"
+                           style="margin-bottom: 0;">
+                    <div class="red-text pb1" data-state="hide" data-email-error></div>
+                </div>
+
+            </div>
+            <div class="pb2 pb1l flex-grid">
+                <div class="w-40">
+                    <label class="text-right-lg blk pr4l bold pb050 pb025l" for="username">Enter a name for the
+                        account</label>
+                    <p class="vsmall g8-text pr4l text-right-lg">This is your personal name or company, group or
+                        organisation. You can change this if needed.</p>
+                </div>
+                <div class="flex1">
+                    <input type="text" class="username-field bor1 gf9 py050 px050 w"
+                           placeholder="e.g. My Company Ltd" data-name-field autocomplete="false">
+                    <div class="red-text pb1" data-state="hide" data-name-error></div>
+                </div>
+
+            </div>
+            <div class="pb2 pb1l flex-grid">
+                <div class="w-40">
+
+                    <label for="password" class="text-right-lg blk pr4l bold pb050 pb025l">Choose a password</label>
+                    <p class="vsmall g8-text pr4l text-right-lg">This you will use to login into your account, and admin
+                        dashboard.</p>
+                </div>
+                <div class="flex1">
+                    <input id="password" class="password-field bor1 gf9 py050 px050 w" type="password"
+                           placeholder="**********" data-password-field autocomplete="new-password">
+                    <div class="red-text pb1" data-state="hide" data-password-error></div>
+                </div>
+
+            </div>
+            <div class="pb2 flex-grid">
+                <div class="w-40"></div>
+                <div class="flex1">
+                    <ka-recaptcha></ka-recaptcha>
+                    <div class="red-text small pt1" data-state="hide" data-recaptcha-error></div>
+                </div>
+
+            </div>
+
+            <div class="flex-grid">
+                <div class="w-40"></div>
+                <div class="flex1">
+                    <label class="rcheck mb2">I agree to be bound by the&nbsp;<a href="/terms/">Terms and
+                        Conditions</a> and <a href="/privacy/">Privacy Policy</a>.
+                        <input type="checkbox" checked="checked" data-accept-field>
+                        <span class="checkmark"></span>
+                        <div class="red-text pb1" data-state="hide" data-accept-error></div>
+                    </label>
+                    <!--                <label class="rcheck"><b>Sign me up for the mailing list.</b>-->
+
+                    <!--                    <input type="checkbox">-->
+                    <!--                    <span class="checkmark"></span>-->
+                    <!--                </label>-->
+                </div>
+
+
+            </div>
+            <div class="flex-grid ">
+                <div class="w-40"></div>
+                <div class="flex1">
+                    <div class="pt2">
+                        <button type="submit" class="submit-button but butgn chevron-right w">Create account
+                        </button>
+                    </div>
+                    <div class="red-text" data-state="hide" data-general-error></div>
+                    <div class="pt2 ">Have an account?&nbsp;<a class="inverse" href="/sign-in/">Sign in</a>.</div>
+                </div>
+
+            </div>
+
+        </form>
+
+    </ka-register>
+
+
+</div>
