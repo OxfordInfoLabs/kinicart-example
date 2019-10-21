@@ -11,13 +11,12 @@ install:
   - nvm install 10
   - npm install
   - npm run install-all
+  - npm -i -g protractor
   - npm run backend &
   - npm run static &
 
 script:
-  - npm run e2e-customer
-  - npm run e2e-static
-
+  - npm run e2e-travis
 
 notifications:
   slack:
