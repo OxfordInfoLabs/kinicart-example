@@ -1,6 +1,8 @@
 sudo: required
 addons:
   chrome: beta
+  apt:
+    update: true
 
 language: php
 
@@ -8,6 +10,7 @@ services:
   - xvfb
 
 install:
+  - apt-get install hugo
   - nvm install 10
   - npm install
   - npm run install-all
