@@ -65,7 +65,7 @@ import { OrderHistoryComponent } from './views/order-history/order-history.compo
         MatMenuModule,
         NgKiniAuthModule.forRoot({
             guestHttpURL: `${environment.backendURL}/guest`,
-            accessHttpURL: `${environment.backendURL}/customer`
+            accessHttpURL: `${environment.backendURL}/account`
         }),
         NgKinicartModule.forRoot({
             guestHttpURL: `${environment.backendURL}/guest`,
