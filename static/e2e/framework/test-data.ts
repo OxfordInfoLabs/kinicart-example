@@ -6,7 +6,7 @@ import {execSync} from "child_process";
 export class TestData {
 
     run() {
-        execSync('(cd ../../../; npm run testdata)');
+        execSync('(cd ../../; npm run testdata)');
     }
 
 }

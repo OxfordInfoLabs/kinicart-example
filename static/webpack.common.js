@@ -26,7 +26,7 @@ module.exports = {
       {
         test: /\.tsx?$/,
         use: ["ts-loader", "uglify-template-string-loader"],
-        exclude: ["/node_modules/","/e2e/"]
+        exclude: /node_modules/
 
       },
 
