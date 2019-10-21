@@ -6,7 +6,7 @@ import {LoginPage} from "../../../../dashboard/customer/e2e/src/login/login.po";
 describe('Sign in tests', () => {
 
     let firstTime = true;
-    
+
     beforeEach(() => {
 
         if (firstTime){
