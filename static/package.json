@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "npm run prebuild && ./node_modules/.bin/run-p start:**",
-    "start:hugo": "hugo -d ../dist -s site -vw",
+    "start:hugo": "hugo -d ../dist -s site -vw -b localhost:5013",
     "start:webpack": "./node_modules/.bin/webpack-dev-server --config webpack.dev.js --hot",
     "prebuild": "./node_modules/.bin/rimraf dist",
     "dev-kini": "rm -rf node_modules/kiniauth; ln -s ../../kiniauth-js node_modules/kiniauth"
