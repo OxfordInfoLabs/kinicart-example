@@ -7,7 +7,7 @@ import * as lunr from "../node_modules/lunr/lunr.js";
 import * as hljs from "highlight.js";
 import * as bash from "../node_modules/highlight.js/lib/languages/bash";
 import * as php from "../node_modules/highlight.js/lib/languages/php";
-import Kiniauth from "../../../kiniauth-js/ts/index";
+import * as  Kiniauth from "../node-modules/kiniauth/dist/kiniauth";
 
 hljs.registerLanguage("bash", bash);
 hljs.registerLanguage("php", php);

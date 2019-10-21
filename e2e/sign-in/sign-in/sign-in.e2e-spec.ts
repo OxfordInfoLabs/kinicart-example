@@ -1,7 +1,7 @@
 import {StandardForm} from "../../framework/standard-form";
 import {browser} from "protractor";
-import {TestData} from "../../../../dashboard/customer/e2e/src/tools/test-data";
-import {LoginPage} from "../../../../dashboard/customer/e2e/src/login/login.po";
+import {TestData} from "../../../dashboard/customer/e2e/src/tools/test-data";
+import {LoginPage} from "../../../dashboard/customer/e2e/src/login/login.po";
 
 describe('Sign in tests', () => {
 
