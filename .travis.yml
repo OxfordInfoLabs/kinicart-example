@@ -11,7 +11,7 @@ install:
   - nvm install 10
   - npm install
   - npm run install-all
-  - npm -i -g protractor
+  - npm i -g protractor
   - npm run backend &
   - npm run static &
 
