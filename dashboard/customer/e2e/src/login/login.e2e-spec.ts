@@ -1,10 +1,17 @@
-import { LoginPage } from './login.po';
+import {LoginPage} from './login.po';
 import {browser, by} from "protractor";
+import {TestData} from "../tools/test-data";
 
 describe('Login Tests', () => {
     let page: LoginPage;
+    let firstTime = true;
+
 
     beforeEach(() => {
+        if (firstTime){
+            firstTime = false;
+            new TestData().run();
+        }
         page = new LoginPage();
     });
 
