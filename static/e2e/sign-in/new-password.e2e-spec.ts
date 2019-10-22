@@ -32,9 +32,6 @@ describe('New password tests', () => {
 
     it("Should see error message if bad password supplied", () => {
 
-        // No captcha initially
-        expect(StandardForm.isCaptchaVisible()).toBeFalsy();
-
         StandardForm.setFieldValue("password", "ba");
         StandardForm.setFieldValue("confirm", "ba");
 
@@ -51,8 +48,8 @@ describe('New password tests', () => {
     it("Should see error message if passwords don't match", () => {
 
 
-        StandardForm.setFieldValue("password", "SensiblePassword6795");
-        StandardForm.setFieldValue("confirm", "WHOOPEE! Let's have some fun here! Partypartypartyparty!");
+        StandardForm.setFieldValue("password", "SensiblePW6795");
+        StandardForm.setFieldValue("confirm", "This place has shoes, I love shoes, OMG, shoppingshoppingshoppingshoppingshopping");
 
         // Submit the form.
         StandardForm.submit();

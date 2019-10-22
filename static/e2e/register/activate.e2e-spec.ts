@@ -8,7 +8,7 @@ describe('Sign in tests', () => {
 
     beforeEach(() => {
 
-        if (firstTime){
+        if (firstTime) {
             firstTime = false;
             new TestData().run();
         }
@@ -18,25 +18,35 @@ describe('Sign in tests', () => {
 
     it("Should see error message if blank", () => {
 
+        expect(StandardForm.isCaptchaVisible()).toBeTruthy();
+
         // Submit the form.
         StandardForm.submit();
 
         expect(StandardForm.hasFieldError("code")).toBeTruthy();
         expect(StandardForm.getFieldError("code")).toContain("activation code is required");
+        expect(StandardForm.hasFieldError("recaptcha")).toBeTruthy();
 
 
     });
 
     it("Should see error message if bad code supplied", () => {
 
+        expect(StandardForm.isCaptchaVisible()).toBeTruthy();
+
+        // Set bad code
         StandardForm.setFieldValue("code", "BEANS BEANS BEANS!");
+
+        // Complete captcha
+        StandardForm.completeCaptcha();
 
         // Submit the form.
         StandardForm.submit();
 
-        browser.sleep(500);
+        browser.sleep(1000);
 
-        expect(StandardForm.getFieldError("code")).toContain("invalid activation code");
+
+        expect(StandardForm.getFieldError("code")).toContain("Invalid activation code");
 
     });
 

@@ -1,7 +1,8 @@
 /**
  * Generic forms logic
  */
-import {by, element} from "protractor";
+import {browser, by, element, protractor} from "protractor";
+import {until} from "selenium-webdriver";
 
 export class StandardForm {
 
@@ -25,7 +26,14 @@ export class StandardForm {
      * @param fieldKey
      */
     public static hasFieldError(fieldKey) {
-        return element(by.css('[data-' + fieldKey + '-error]')).isDisplayed();
+
+        var displayed = false;
+        var runs = 0;
+        while (!(displayed = element(by.css('[data-' + fieldKey + '-error]')).isDisplayed() && runs < 5)) {
+            browser.sleep(100);
+            runs++;
+        }
+        return displayed;
     }
 
 
@@ -43,11 +51,13 @@ export class StandardForm {
      * Boolean indicator for captcha visible
      */
     public static isCaptchaVisible() {
-        try {
-            return element(by.css('ka-recaptcha')).isDisplayed();
-        } catch (e) {
-            return false;
-        }
+
+        var until = protractor.ExpectedConditions;
+
+        browser.wait(until.presenceOf(element(by.css('ka-recaptcha iframe'))));
+
+        return element(by.css('ka-recaptcha iframe')).isDisplayed()
+
     }
 
 
@@ -55,6 +65,19 @@ export class StandardForm {
      * Complete the captcha
      */
     public static completeCaptcha() {
+
+        // Switch to the iframe
+        let iframe = browser.driver.findElement(by.tagName("iframe"));
+        browser.switchTo().frame(iframe);
+
+        element(by.css(".recaptcha-checkbox")).click();
+
+        // Switch back
+        browser.switchTo().defaultContent();
+
+        // Wait a second
+        browser.sleep(1000);
+
 
     }
 
@@ -65,6 +88,7 @@ export class StandardForm {
     public static submit() {
         let submitButton = element(by.css('[type="submit"]'));
         submitButton.click();
+
     }
 
 
