@@ -1,6 +1,6 @@
-import {StandardForm} from "../../framework/standard-form";
+import {StandardForm} from "../framework/standard-form";
 import {browser} from "protractor";
-import {TestData} from "../../framework/test-data";
+import {TestData} from "../framework/test-data";
 
 
 

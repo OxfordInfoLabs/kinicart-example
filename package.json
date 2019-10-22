@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "install-all": "npm install; cd static; npm install; cd ../backend; composer clearcache; composer install; composer update;",
-    "run-all": "",
+    "run-all": "npm run backend & npm run customer & npm run static",
     "testdata": "cd backend; composer test-data",
     "backend": "cd backend; composer serve",
     "admin": "cd dashboard/admin && ng serve admin --port 5001",
