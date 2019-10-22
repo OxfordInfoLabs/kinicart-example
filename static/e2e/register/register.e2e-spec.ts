@@ -22,8 +22,6 @@ describe('Register tests', () => {
     it("Should not be able to login with blank email, company and password", () => {
 
 
-        browser.sleep(200);
-
         // captcha initially
         expect(StandardForm.isCaptchaVisible()).toBeTruthy();
 
