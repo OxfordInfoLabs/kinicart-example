@@ -69,7 +69,7 @@ import { OrderHistoryComponent } from './views/order-history/order-history.compo
         }),
         NgKinicartModule.forRoot({
             guestHttpURL: `${environment.backendURL}/guest`,
-            accessHttpURL: `${environment.backendURL}/customer`
+            accessHttpURL: `${environment.backendURL}/account`
         })
     ],
     providers: [

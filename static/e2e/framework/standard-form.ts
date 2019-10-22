@@ -43,7 +43,11 @@ export class StandardForm {
      * Boolean indicator for captcha visible
      */
     public static isCaptchaVisible() {
-        return element(by.css('ka-recaptcha')).isDisplayed();
+        try {
+            return element(by.css('ka-recaptcha')).isDisplayed();
+        } catch (e) {
+            return false;
+        }
     }
 
 

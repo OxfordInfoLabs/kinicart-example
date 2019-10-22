@@ -7,6 +7,12 @@ namespace KinicartExample\Objects\Product\PackagedProduct;
 use Kinicart\Objects\Product\PackagedProduct\Feature;
 use Kinicart\Objects\Product\PackagedProduct\PackagedProduct;
 
+/**
+ * Class Email
+ * @package KinicartExample\Objects\Product\PackagedProduct
+ *
+ * @noGenerate
+ */
 class Email extends PackagedProduct {
 
 

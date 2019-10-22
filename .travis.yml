@@ -1,6 +1,8 @@
 sudo: required
 addons:
   chrome: beta
+  apt:
+    update: true
 
 language: php
 
@@ -8,14 +10,17 @@ services:
   - xvfb
 
 install:
+  - wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.59.0/hugo_0.59.0_Linux-64bit.deb
+  - sudo dpkg -i /tmp/hugo.deb
   - nvm install 10
   - npm install
   - npm run install-all
+  - npm i -g protractor
   - npm run backend &
+  - npm run static &
 
 script:
-  - npm run e2e-customer
-
+  - npm run e2e-travis
 
 notifications:
   slack:

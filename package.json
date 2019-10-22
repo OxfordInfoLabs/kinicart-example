@@ -14,7 +14,8 @@
     "e2e": "webdriver-manager update; protractor backend/e2e/conf.js",
     "e2e-customer": "cd dashboard/customer; ng e2e",
     "e2e-static": "cd static/e2e; ../node_modules/protractor/bin/webdriver-manager update; ../node_modules/protractor/bin/protractor protractor.conf.js",
-    "fix-libs": "rm -rf backend/vendor/oxil/kini*; ln -s ../../../../../kinikit/kinikit-core backend/vendor/oxil/;ln -s ../../../../../kinikit/kinikit-mvc backend/vendor/oxil/;ln -s ../../../../../kinikit/kinikit-persistence backend/vendor/oxil/; ln -s ../../../../kinicart backend/vendor/oxil/; ln -s ../../../../kiniauth backend/vendor/oxil/"
+    "fix-libs": "rm -rf backend/vendor/oxil/kini*; ln -s ../../../../../kinikit/kinikit-core backend/vendor/oxil/;ln -s ../../../../../kinikit/kinikit-mvc backend/vendor/oxil/;ln -s ../../../../../kinikit/kinikit-persistence backend/vendor/oxil/; ln -s ../../../../kinicart backend/vendor/oxil/; ln -s ../../../../kiniauth backend/vendor/oxil/",
+    "e2e-travis": "cd dashboard/customer; ng e2e; cd ../../static/e2e; protractor protractor.conf.js"
   },
   "private": true,
   "dependencies": {
@@ -31,9 +32,9 @@
     "@angular/router": "~8.2.7",
     "hammerjs": "^2.0.8",
     "moment": "^2.24.0",
-    "ng-kiniauth": "0.0.21",
+    "ng-kiniauth": "0.0.22",
     "ng-kinibind": "0.0.8",
-    "ng-kinicart": "0.0.14",
+    "ng-kinicart": "0.0.15",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
