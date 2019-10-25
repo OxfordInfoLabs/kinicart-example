@@ -7,7 +7,7 @@ import * as lunr from "../node_modules/lunr/lunr.js";
 import * as hljs from "highlight.js";
 import * as bash from "../node_modules/highlight.js/lib/languages/bash";
 import * as php from "../node_modules/highlight.js/lib/languages/php";
-import * as  Kiniauth from "../node_modules/kiniauth/dist/kiniauth";
+import * as  Kinicart from "../node_modules/kinicart/dist/kinicart";
 
 hljs.registerLanguage("bash", bash);
 hljs.registerLanguage("php", php);
@@ -26,7 +26,7 @@ var closeRowInfoBtn = $(".close-row-info");
 var sidebarBtn = $("#btn-sidebar");
 
 
-new Kiniauth({
+new Kinicart({
     endpoint: "http://localhost:5000",
     recaptchaKey: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI",
     elementVisibilityFunction: function (element: Element, visible: boolean) {
