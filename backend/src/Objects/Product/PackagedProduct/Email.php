@@ -13,7 +13,7 @@ use Kinicart\Objects\Product\PackagedProduct\PackagedProduct;
  *
  * @noGenerate
  */
-class Email extends PackagedProduct {
+class Email implements PackagedProduct {
 
 
     /**

@@ -12,7 +12,7 @@ use Kinicart\Objects\Product\PackagedProduct\PackagedProduct;
  *
  * @noGenerate
  */
-class VirtualHost extends PackagedProduct {
+class VirtualHost implements PackagedProduct {
 
 
     /**
