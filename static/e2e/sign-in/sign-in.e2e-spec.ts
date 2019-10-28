@@ -3,14 +3,13 @@ import {browser} from "protractor";
 import {TestData} from "../framework/test-data";
 
 
-
 describe('Sign in tests', () => {
 
     let firstTime = true;
 
     beforeEach(() => {
 
-        if (firstTime){
+        if (firstTime) {
             firstTime = false;
             new TestData().run();
         }
@@ -21,8 +20,6 @@ describe('Sign in tests', () => {
 
     it("Should not be able to login with blank email and password", () => {
 
-        // No captcha initially
-        expect(StandardForm.isCaptchaVisible()).toBeFalsy();
 
         // Submit the form.
         StandardForm.submit();
@@ -40,8 +37,6 @@ describe('Sign in tests', () => {
 
     it("Should see error message and captcha if bad credentials supplied", () => {
 
-        // No captcha initially
-        expect(StandardForm.isCaptchaVisible()).toBeFalsy();
 
         StandardForm.setFieldValue("email", "mark@test.com");
         StandardForm.setFieldValue("password", "badpassword");
@@ -58,10 +53,6 @@ describe('Sign in tests', () => {
         expect(StandardForm.isCaptchaVisible()).toBeTruthy();
 
     });
-
-
-
-
 
 
 });

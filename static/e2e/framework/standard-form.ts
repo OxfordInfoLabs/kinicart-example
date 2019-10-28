@@ -54,7 +54,7 @@ export class StandardForm {
 
         var until = protractor.ExpectedConditions;
 
-        browser.wait(until.presenceOf(element(by.css('ka-recaptcha iframe'))));
+        browser.wait(until.presenceOf(element(by.css('ka-recaptcha iframe'))), 2000);
 
         return element(by.css('ka-recaptcha iframe')).isDisplayed()
 
