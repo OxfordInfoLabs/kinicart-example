@@ -1,10 +1,10 @@
 <?php
 
-namespace KinicartExample\Objects\Product\PackagedProduct;
+namespace KinicartExample\Services\Product\PackagedProduct;
 
 
 use Kinicart\Objects\Product\PackagedProduct\Feature;
-use Kinicart\Objects\Product\PackagedProduct\PackagedProduct;
+use Kinicart\Services\Product\PackagedProduct\PackagedProduct;
 
 /**
  * Class VirtualHost
@@ -12,7 +12,7 @@ use Kinicart\Objects\Product\PackagedProduct\PackagedProduct;
  *
  * @noGenerate
  */
-class VirtualHost implements PackagedProduct {
+class VirtualHost extends PackagedProduct {
 
 
     /**

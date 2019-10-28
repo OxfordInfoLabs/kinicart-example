@@ -2,8 +2,5 @@
   "main": {
     "css": "main.css",
     "js": "main.js"
-  },
-  "": {
-    "json": "1c7aec5543993178d218.hot-update.json"
   }
 }

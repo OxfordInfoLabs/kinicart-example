@@ -1,2 +1,2 @@
-virtual-host=KinicartExample\Objects\Product\PackagedProduct\VirtualHost
-email=KinicartExample\Objects\Product\PackagedProduct\Email
+virtual-host=KinicartExample\Services\Product\PackagedProduct\VirtualHost
+email=KinicartExample\Services\Product\PackagedProduct\Email

@@ -1,11 +1,11 @@
 <?php
 
 
-namespace KinicartExample\Objects\Product\PackagedProduct;
+namespace KinicartExample\Services\Product\PackagedProduct;
 
 
 use Kinicart\Objects\Product\PackagedProduct\Feature;
-use Kinicart\Objects\Product\PackagedProduct\PackagedProduct;
+use Kinicart\Services\Product\PackagedProduct\PackagedProduct;
 
 /**
  * Class Email
@@ -13,7 +13,7 @@ use Kinicart\Objects\Product\PackagedProduct\PackagedProduct;
  *
  * @noGenerate
  */
-class Email implements PackagedProduct {
+class Email extends PackagedProduct {
 
 
     /**
