@@ -1,5 +1,5 @@
 ---
-title: "Static Websites"
+title: "Hosting"
 publishdate: "2019-09-27"
 lastmod: "2019-09-27"
 categories: []
@@ -23,43 +23,34 @@ headerbreadcrumb: true
         <col class="brand-lighter">
         <col class="brand ">
       </colspan>
-      <tr>
-        <td class="w-33 w-auto-sm gf9"></td>
-        <td class="gf9 ">
-          Individuals
-        </td>
-        <td colspan="2" class="border30 white-text">Business and teams</td>
-      </tr>
+
       <tr>
         <td class="border-b0 border-l0"></td>
-        <td class="border-b0">
-          <div class="semi f5 mb1 pt1">Starter</div>
-          <div class="semi f2 mb1">£9.99</div>
+        <td kb-each-plan="plans" kb-class-white-text="$index" class="border-b0">
+          <div class="semi f5 mb1 pt1">{plan.title}</div>
+          <div class="semi f2 mb1">
+            <span kb-show="plan.workingCurrency | eval '==' 'USD'">$</span><span kb-show="plan.workingCurrency | eval '==' 'GBP'">£</span><span kb-show="plan.workingCurrency | eval '==' 'EUR'">€</span>{plan.activePrices.MONTHLY}
+          </div>
           <div class="semi mb0">Per month</div>
-          <div class="tiny pb2 g8-text">Great all round package for individuals</div>
-          <div class="vsmall text-left"><i class="net-special green-text"></i> Unlimited versions<br><i class="net-check green-text"></i> DNSSEC domain security <br>
-            <i class="net-check green-text"></i> Stage/preview hosting<br>
-            <i class="net-check green-text"></i> Production hosting<br>
-            <i class="net-check green-text"></i> Node package tools<br>
+          <div kb-if="plan.activePrices.ANNUAL">
+            <span kb-show="plan.workingCurrency | eval '==' 'USD'">$</span><span kb-show="plan.workingCurrency | eval '==' 'GBP'">£</span><span kb-show="plan.workingCurrency | eval '==' 'EUR'">€</span>{plan.activePrices.ANNUAL} per year
           </div>
-        </td>
-        <td class="border30 border-b0 white-text py075">
-          <div class="semi">No. of domains</div>
-          <div class="py075 f4 semi">50+</div>
-          <div class="tiny lh11 "><a href="" class="gc-text normal inv">Transfer domains to us &rarr;</a></div>
-        </td>
-        <td class="border30 border-b0 white-text">
-          <div class="semi">No. of domains</div>
-          <div class="py075 f4 semi">1000+</div>
-          <div class="tiny lh11 "><a href="" class="white-text normal inv">Learn about our VIP plan &rarr;</a>
+          <div class="tiny pb2 g8-text">{plan.description}</div>
+          <div class="vsmall text-left">
+            <span kb-each-feature="plan.packageFeatures">
+              <i class="net-check green-text"></i> {feature.title} {feature.quantity} <br>
+            </span>
+            <span kb-each-excessFeature="plan.excessFeatures">
+              <i class="net-check green-text"></i> {excessFeature.title} {excessFeature.quantity} <br>
+            </span>
           </div>
         </td>
       </tr>
       <tr>
         <td class="border-b0 border-l0"></td>
-        <td ><a href="/hosting/static/domains/" class="but butgn butblk">Choose Starter</a></td>
-        <td class="border30"><a href="/hosting/static/domains/" class="but butgn butblk">Choose Pro</a></td>
-        <td class="border30"><a href="/hosting/static/domains/" class="but butbk butgn">Choose E-Commerce</a></td>
+        <td kb-each-plan="plans">
+            <a href="#" data-add-to-cart kb-data-plan="plan.identifier" class="but butgn butblk">Choose {plan.title}</a>
+        </td>
       </tr>
       <tr>
         <td colspan="2" class="border-l0 border-t0 border-r0 "><h4 class="mb025 pt3">Domain names</h4></td>

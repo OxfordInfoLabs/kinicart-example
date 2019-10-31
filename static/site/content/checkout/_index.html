@@ -1,0 +1,233 @@
+---
+title: "Confirm your order"
+linktext: Checkout
+publishdate: "2019-10-11"
+lastmod: "2019-10-11"
+categories: []
+description: "Your cart.  Review purchases, adjust quantities and proceed to checkout."
+noindex: true
+frontpagehero: 'false'
+footercta: false
+theme: brand
+---
+
+
+<div class="grid px1 px2l pb3 pt2">
+    <kc-checkout data-security-url="/security" data-billing-url="/billing">
+
+        <div id="checkout-wrapper">
+            <div class="flex flex-wrap ">
+                <div class="w-75 ">
+                    <div class="grid pb1 ">
+                        <h1 class="f3 ">{{< param title >}}</h1>
+                        <p class=" ">Please review your order and payment details</p>
+
+                        <div class="bort3 ge pt2l pt1 pb2 pl4l px1 mb125">
+                            <h4 class=" thin">Your Billing details</h4>
+                            <div class="flex-grid flex-row-reverse">
+                                <div class="w-40">
+                                    <p>Oxford Information Labs</p>
+                                    <p>Lincoln House <br>
+                                        4 Pony Road <br>
+                                        Oxford <br>
+                                        Oxfordshire <br>
+                                        OX4 2RD <br>
+                                        UK
+                                    </p>
+                                </div>
+                                <div class="w-60">
+
+                                    <p class="thin small">Carefully check all information provided</p>
+                                    <a href="/billing/" class="but butsoftwh butsm ">Change these details</a>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <div class="ge pt2l pt1 pb2 pl4l px1 ">
+                            <h4 class="normal">Payment</h4>
+
+                            <div class="flex align-center mb075">
+                                <label class="mb0"><input name="configurestaticpackage" type="radio" checked="checked">
+                                    Pay
+                                    with credit card </label>
+                                <img height="60" src="/images/payment_methods.png" alt="">
+                            </div>
+                            <div class="white p150 mb2">
+                                <label class="mb050 blk"><input name="paymentselected" type="radio" checked="checked">
+                                    ending <b>6614</b> (expires 1/2019 Visa)</label>
+                                <label class="blk"><input name="paymentselected" type="radio"> use a different
+                                    card</label>
+                            </div>
+
+
+                            <div class="flex-grid align-center">
+                                <div class="w-60">
+
+                                    <p class="thin small">I accept the latest <a href="/terms/">Terms &amp;
+                                        Conditions</a>
+                                    </p>
+
+                                </div>
+                                <div class="w-40">
+                                    <a href="/order-confirmation/" class="but butgn">place order & pay <i
+                                            class="net-chevron-right"></i></a>
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+                        <div class="pl4l pt4">
+                            <h4 class="thin">Order summary</h4>
+                            <table class="table table-cart">
+
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="bold">Netistrar Corporate Website</div>
+                                        <div>Static Website Hosting</div>
+                                        <div class="vsmall"><b>PRO PACKAGE 400GB</b> Monthly</div>
+                                    </td>
+                                    <td class="text-right">£99.00</td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="bold uppercase">greatbigstring.com</div>
+                                        <div>Domain Name Registration</div>
+                                        <div class="vsmall"><b>1YR</b> 12 Nov 2019 - 11 Nov 2020</div>
+                                    </td>
+                                    <td class="text-right">£99.00</td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="bold">Static Website Hosting and greatbigdomainnamethingagaginadfdsfad</div>
+                                        <div>Title: NETISTRAR.COM</div>
+                                        <div>12 Nov 2019 - 11 Nov 2020</div>
+                                    </td>
+                                    <td class="text-right">£99.00</td>
+
+                                </tr>
+                                </tbody>
+                                <tfoot>
+                                <tr>
+                                    <th colspan="2" class="text-right-lg ">
+                                        <div class="pt2 flex align-center mb0"><span
+                                                class="pr1 w-66 normal">Total ex. VAT</span><span
+                                                class="w-33 normal">&pound;7.99</span></div>
+                                        <div class="flex align-center mb0 pt1"><span
+                                                class="pr1 w-66 normal">VAT</span><span
+                                                class="w-33 normal">&pound;2.99</span></div>
+                                        <div class="pt1 pb2 flex align-center"><span
+                                                class="bold pr1 w-66">Total</span><span
+                                                class="f3 normal w-33">&pound;12.99</span></div>
+                                    </th>
+
+                                </tr>
+                                </tfoot>
+
+                            </table>
+                            <div class="flex-grid align-center text-right justify-between bort3 bortdd pt2">
+                                <div class="w-60">
+
+                                    <p class="thin small text-right">I accept the latest <a href="/terms/">Terms &amp;
+                                        Conditions</a>
+                                    </p>
+
+                                </div>
+
+                                <a href="/order-confirmation/" class="but butgn">place order & pay <i
+                                        class="net-chevron-right"></i></a>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="w-25 pl2l ">
+                    <div class="bort3 bortbk">
+                        <div class="flex justify-end"><a class="inv small flex align-center normal ib py050"
+                                                         href="/cart/">edit
+                            cart <i class="net-launch-out"></i></a></div>
+                        <div class="p050 flex thin align-center small ge mb1">
+                            <i class="net-cart-hollow f4"></i> <span class="f4">1</span> item in your cart
+                        </div>
+                        <div class="bort1 borb1 py050 ">
+                            <button class="but butlk butblk inv text-left normal ic icr "><small>View items <i
+                                    class="net-chevron-down"></i></small>
+
+                            </button>
+
+                            <div class="pt050 pb1 small">
+                                <div class="flex">
+                                    <div class="flex1"><b>PRO Static Package</b>
+                                        400GB
+                                    </div>
+                                    <div class="w-30 text-right">£12.99</div>
+                                </div>
+                                <div class="flex">
+                                    <div class="flex1"><b>Extra Bandwidth</b>
+                                        200GB
+                                    </div>
+                                    <div class="w-30 text-right">£10.00</div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="borb1 small py1">
+                            <div class="flex">
+                                <div class="w-66 text-right">Total (ex VAT)</div>
+                                <div class="w-33 text-right">&pound;7.99</div>
+                            </div>
+                            <div class="flex py075">
+                                <div class="w-66 text-right">VAT</div>
+                                <div class="w-33 text-right">&pound;2.99</div>
+                            </div>
+                            <div class="flex">
+                                <div class="w-66 text-right bold">Total</div>
+                                <div class="w-33 text-right bold">&pound;17.99</div>
+                            </div>
+                        </div>
+                        <div class="py1">
+                            <a href="/order-confirmation/" class="but butgn butblk">place order & pay <i
+                                    class="net-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="loading-checkout" class="modal progress-modal flex justify-center align-center">
+            <div class="white p2 m2 br8tl br8tr br8bl br8br"><h4>Loading checkout ...</h4>
+                <p class="message">Please wait ...</p>
+
+                <div class="text-center pt2 ">
+                    <img width="100" src="/images/loading.gif" alt="">
+                </div>
+
+
+            </div>
+
+        </div>
+    </kc-checkout>
+</div>
+
+<div id="processing-order" class="modal progress-modal flex justify-center align-center">
+    <div class="white p2 m2 br8tl br8tr br8bl br8br"><h4>Processing your order ...</h4>
+        <p class="message">Please wait ... processing payment</p>
+
+        <div class="text-center pt2 ">
+            <img width="100" src="/images/loading.gif" alt="">
+        </div>
+
+
+    </div>
+
+</div>

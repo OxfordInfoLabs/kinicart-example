@@ -14,105 +14,73 @@ headerbreadcrumb: true
 <h1 class="grid px1 px2l pt2 f3 pb1 bold">Cart summary</h1>
 
 <div class="grid px2l pb3">
+    <kc-cart>
 
-  <div class="flex flex-row-reverse">
-    <div id="checkout-widget" >
-      <div id="foot" class="brand br8tl br8tr px075 py1 ">
-        <div id="dec" class="img-shadow text-center white-text brand hidden-md"><i class="net-chevron-up"></i></div>
-        <div class="totals">
-          <div class="semi uppercase white-text small pb050">Total</div>
-          <div class="white-text f3 pb050">&pound;12.99</div>
-          <div class="vsmall ge-text pb1">1 static hosting</div>
+        <div class="flex flex-row-reverse">
+            <div id="checkout-widget">
+                <div id="foot" class="brand br8tl br8tr px075 py1 ">
+                    <div id="dec" class="img-shadow text-center white-text brand hidden-md"><i
+                            class="net-chevron-up"></i></div>
+                    <div class="totals">
+                        <div class="semi uppercase white-text small pb050">Total</div>
+                        <div class="white-text f3 pb050">{cart.total}</div>
+<!--                        <div class="vsmall ge-text pb1">1 static hosting</div>-->
+                    </div>
+                    <div class="ctrls">
+                        <div class="pb050">
+                            <a href="/checkout" class="but butgn ic icr w">Continue <i class="net-chevron-right"></i></a>
+                        </div>
+                        <div>
+                            <button class="but butbrwh butsm ic icr w">Quick checkout <i class="net-cart-solid"></i>
+                            </button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="w-75 pr2l overflow-x">
+                <table class="table table-pricing white">
+                    <thead>
+                    <tr>
+                        <th width="100%">Item</th>
+                        <th class="text-right">Price</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr kb-each-item="cart.items">
+                        <td>
+                            <div class="bold">{item.title}</div>
+                            <div>{item.description}</div>
+                        </td>
+                        <td class="text-right">{item.total}</td>
+                        <td>
+                            <div kb-show="item.type | eval '!=' 'package'" class="flex justify-between">
+                                <div class="pr1">Qty</div>
+                                <div class="flex">
+                                    <button class="but-widget"><i class="net-minus"></i></button>
+                                    <span class="px050">{item.quantity}</span>
+                                    <button class="but-widget text-colour"><i class="net-plus"></i></button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <th colspan="2" class="text-right-lg ">
+                            <div class="pt1 pb2"><span class="bold pr1">Total ex. VAT</span><span
+                                    class="f3 normal py2">{cart.total}</span></div>
+
+                        </th>
+                        <th></th>
+                    </tr>
+                    </tfoot>
+
+                </table>
+            </div>
         </div>
-        <div class="ctrls">
-          <div class="pb050">
-            <button class="but butgn ic icr w">Continue <i class="net-chevron-right"></i></button>
-          </div>
-          <div>
-            <button class="but butbrwh butsm ic icr w">Quick checkout <i class="net-cart-solid"></i></button>
-          </div>
-        </div>
-
-
-      </div>
-    </div>
-    <div class="w-75 pr2l overflow-x">
-      <table class="table table-pricing white">
-        <thead>
-        <tr>
-          <th width="100%">Item</th>
-          <th class="text-right">Price</th>
-          <th ></th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>
-            <div class="bold">Static Website Hosting</div>
-            <div>Title: NETISTRAR.COM</div>
-            <div>12 Nov 2019 - 11 Nov 2020</div>
-          </td>
-          <td class="text-right">£99</td>
-          <td>
-            <div class="flex justify-between">
-              <div class="pr1">Qty</div>
-              <div class="flex">
-                <button class="but-widget"><i class="net-minus"></i></button>
-                <span class="px050">1</span>
-                <button class="but-widget text-colour"><i class="net-plus"></i></button>
-              </div>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="bold">Static Website Hosting and greatbigdomainnamethingagaginadfdsfad</div>
-            <div>Title: NETISTRAR.COM</div>
-            <div>12 Nov 2019 - 11 Nov 2020</div>
-          </td>
-          <td class="text-right">£99</td>
-          <td>
-            <div class="flex justify-between">
-              <div class="pr1">Qty</div>
-              <div class="flex">
-                <button class="but-widget"><i class="net-minus"></i></button>
-                <span class="px050">1</span>
-                <button class="but-widget text-colour"><i class="net-plus"></i></button>
-              </div>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="bold">Static Website Hosting and greatbigdomainnamethingagaginadfdsfad</div>
-            <div>Title: NETISTRAR.COM</div>
-            <div>12 Nov 2019 - 11 Nov 2020</div>
-          </td>
-          <td class="text-right">£99</td>
-          <td>
-            <div class="flex justify-between">
-              <div class="pr1">Qty</div>
-              <div class="flex">
-                <button class="but-widget"><i class="net-minus"></i></button>
-                <span class="px050">1</span>
-                <button class="but-widget text-colour"><i class="net-plus"></i></button>
-              </div>
-            </div>
-          </td>
-        </tr>
-        </tbody>
-        <tfoot>
-        <tr>
-          <th colspan="2" class="text-right-lg "><div class="pt1 pb2"><span class="bold pr1">Total ex. VAT</span><span
-              class="f3 normal py2">&pound;12.99</span></div>
-
-          </th>
-          <th></th>
-        </tr>
-        </tfoot>
-
-      </table>
-    </div>
-  </div>
-
+    </kc-cart>
 </div>

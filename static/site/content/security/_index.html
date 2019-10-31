@@ -1,0 +1,97 @@
+---
+title: 'Security'
+date: '2018-11-19T15:55:46Z'
+description: 'Login to Netistrar, the UK Domain Name Registrar specialising in wholesale domain names and web services at trade prices'
+tags: []
+categories: []
+noindex: 'true'
+footercta: false
+
+---
+
+<div class="">
+
+    <div class="px1 px2l text-center py1 grid">
+        <div class=" flex justify-end align-center"><span>Checking out</span> <span
+                class="">&nbsp;&gt;&gt;&nbsp; </span>
+            <span class="leaf g8-text">Security</span></div>
+        <h1 class="f2 normal  pb1">Sign in or Register</h1>
+        <div class="grid grid-small g5-text f5 thin px1 text-center lh12">Enter your username or email address and password or click to register a new account.</div>
+    </div>
+
+
+</div>
+
+<div class="grid flex-grid white mt2 mb4 px1 px2l">
+    <div class="w-60 bor1 bordd borrt-lg borbt-sm p150">
+        <h5 class=" mb2">Already have an account?</h5>
+        <ka-signin data-two-factor-url="/sign-in/2fa/">
+            <form data-signin>
+                <div class="pb2 flex-grid ">
+                    <div class="w-40">
+                        <label class="text-right-lg blk pr4l bold pb050 pb025l" for="username">Enter your email
+                            address</label>
+                    </div>
+                    <div class="flex1">
+                        <input id="username" name="username" type="username"
+                               class="username-field bor1 gf9 py050 px050 w"
+                               data-email-field placeholder="e.g. maria@mydomain.uk" autocomplete="username"
+                               style="margin-bottom: 0;">
+                        <p class="red-text small" data-state="hide" data-email-error></p>
+                    </div>
+
+                </div>
+                <div class="pb2 flex-grid">
+
+                    <div class="w-40">
+
+                        <label for="password" class="text-right-lg blk pr4l bold pb050 pb025l">Enter your
+                            password</label>
+                    </div>
+                    <div class="flex1">
+                        <input id="password" name="password" class="password-field bor1 gf9 py050 px050 w"
+                               type="password"
+                               placeholder="**********" data-password-field autocomplete="current-password">
+                        <div class="red-text small" data-state="hide" data-password-error></div>
+                        <div class="red-text" data-state="hide" data-general-error></div>
+                    </div>
+
+                </div>
+
+                <div class="pb2 flex-grid">
+                    <div class="w-40"></div>
+                    <div class="flex1">
+                        <ka-recaptcha></ka-recaptcha>
+                        <div class="red-text small pt1" data-state="hide" data-recaptcha-error></div>
+                    </div>
+
+                </div>
+
+                <div class="flex-grid ">
+                    <div class="w-40"></div>
+                    <div class="flex1">
+                        <div class="flex-grid align-center">
+                            <button type="submit" class="but butgn chevron-right login-action two-fa">Login</button>
+                            <div class="mt1 mt0l pl2l">or <a class="forgotten-password semi"
+                                                             href="/sign-in/password-reset/">click
+                                here to reset your password</a></div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </form>
+
+
+        </ka-signin>
+
+    </div>
+    <div class="w-40 ge bor1 boree flex justify-center align-center py2">
+
+        <a href="/register/" class="but">Register a new account</a>
+    </div>
+
+</div>
+
