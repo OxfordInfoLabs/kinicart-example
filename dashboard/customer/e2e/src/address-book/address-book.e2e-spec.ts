@@ -76,4 +76,16 @@ describe('Account Summary Tests', () => {
         expect(page.getSaveChangesEnabled()).toBeFalsy();
     });
 
+    it("Should create new contact with all essential fields filled in", () => {
+        page.clickNewContact();
+        page.setFullName("Ivo Robotnik");
+        page.setAddress1("52 Well Lane");
+        page.setTownCity("Patmore Heath");
+        page.setCounty("Fridge");
+        page.setPostCode("SG11 7ZB");
+        page.setCountry("Heard Island");
+        expect(page.getSaveChangesEnabled()).toBeTruthy();
+        // page.clickSaveChanges();
+    })
+
 });

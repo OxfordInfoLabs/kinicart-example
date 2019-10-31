@@ -12,7 +12,7 @@ export class AddressBookPage {
     }
 
 
-    getSaveChangesEnabled(){
+    getSaveChangesEnabled() {
         return element(by.cssContainingText('button', 'SAVE CHANGES')).isEnabled();
     }
 
@@ -46,12 +46,14 @@ export class AddressBookPage {
         return addressPostcodeField.sendKeys(postCode) as Promise<any>;
     }
 
+    setCountry(countryName) {
+        return element(by.cssContainingText('option', countryName)).click() as Promise<any>;
+    }
 
 
     clickSaveChanges() {
         element(by.cssContainingText('button', 'SAVE CHANGES')).click();
     }
-
 
 
 }
