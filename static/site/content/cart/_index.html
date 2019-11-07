@@ -31,8 +31,8 @@ headerbreadcrumb: true
                             <a href="/checkout" class="but butgn ic icr w">Continue <i class="net-chevron-right"></i></a>
                         </div>
                         <div>
-                            <button class="but butbrwh butsm ic icr w">Quick checkout <i class="net-cart-solid"></i>
-                            </button>
+                            <a href="/checkout" class="but butbrwh butsm ic icr w">Quick checkout <i class="net-cart-solid"></i>
+                            </a>
                         </div>
                     </div>
 
@@ -53,6 +53,7 @@ headerbreadcrumb: true
                         <td>
                             <div class="bold">{item.title}</div>
                             <div>{item.description}</div>
+                            <div kb-show="item.subDescription">{item.subDescription}</div>
                         </td>
                         <td class="text-right">{item.total}</td>
                         <td>

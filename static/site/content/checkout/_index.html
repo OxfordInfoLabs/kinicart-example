@@ -25,20 +25,13 @@ theme: brand
                         <div class="bort3 ge pt2l pt1 pb2 pl4l px1 mb125">
                             <h4 class=" thin">Your Billing details</h4>
                             <div class="flex-grid flex-row-reverse">
-                                <div class="w-40">
-                                    <p>Oxford Information Labs</p>
-                                    <p>Lincoln House <br>
-                                        4 Pony Road <br>
-                                        Oxford <br>
-                                        Oxfordshire <br>
-                                        OX4 2RD <br>
-                                        UK
-                                    </p>
+                                <div class="w-40" kb-html="billingContact.htmlAddressLinesString">
+
                                 </div>
                                 <div class="w-60">
 
                                     <p class="thin small">Carefully check all information provided</p>
-                                    <a href="/billing/" class="but butsoftwh butsm ">Change these details</a>
+                                    <a kb-href="billingURL" class="but butsoftwh butsm ">Change these details</a>
                                 </div>
 
                             </div>
@@ -55,12 +48,15 @@ theme: brand
                                 <img height="60" src="/images/payment_methods.png" alt="">
                             </div>
                             <div class="white p150 mb2">
-                                <label class="mb050 blk"><input name="paymentselected" type="radio" checked="checked">
-                                    ending <b>6614</b> (expires 1/2019 Visa)</label>
-                                <label class="blk"><input name="paymentselected" type="radio"> use a different
-                                    card</label>
-                            </div>
+                                <label class="mb050 blk" kb-each-method="paymentMethods">
+                                    <input name="paymentselected" type="radio" kb-value="method.id">
+                                    ending <b>{method.payment.card.last4}</b>
+                                    (expires {method.payment.card.exp_month}/{method.payment.card.exp_year} {method.payment.card.brand})
+                                </label>
+                                <label class="blk"><input name="paymentselected" type="radio" value="new"> use a different card</label>
 
+                                <kc-stripe-element id="stripe-element" class="p1"></kc-stripe-element>
+                            </div>
 
                             <div class="flex-grid align-center">
                                 <div class="w-60">
@@ -71,8 +67,8 @@ theme: brand
 
                                 </div>
                                 <div class="w-40">
-                                    <a href="/order-confirmation/" class="but butgn">place order & pay <i
-                                            class="net-chevron-right"></i></a>
+                                    <button class="but butgn place-order">place order & pay <i
+                                            class="net-chevron-right"></i></button>
                                 </div>
 
 
@@ -82,51 +78,43 @@ theme: brand
                         </div>
                         <div class="pl4l pt4">
                             <h4 class="thin">Order summary</h4>
-                            <table class="table table-cart">
-
+                            <table class="table table-pricing white">
+                                <thead>
+                                <tr>
+                                    <th width="100%">Item</th>
+                                    <th class="text-right">Price</th>
+                                    <th></th>
+                                </tr>
+                                </thead>
                                 <tbody>
-                                <tr>
+                                <tr kb-each-item="cart.items">
                                     <td>
-                                        <div class="bold">Netistrar Corporate Website</div>
-                                        <div>Static Website Hosting</div>
-                                        <div class="vsmall"><b>PRO PACKAGE 400GB</b> Monthly</div>
+                                        <div class="bold">{item.title}</div>
+                                        <div>{item.description}</div>
+                                        <div kb-show="item.subDescription">{item.subDescription}</div>
                                     </td>
-                                    <td class="text-right">£99.00</td>
-
-                                </tr>
-                                <tr>
+                                    <td class="text-right">{item.total}</td>
                                     <td>
-                                        <div class="bold uppercase">greatbigstring.com</div>
-                                        <div>Domain Name Registration</div>
-                                        <div class="vsmall"><b>1YR</b> 12 Nov 2019 - 11 Nov 2020</div>
+                                        <div kb-show="item.type | eval '!=' 'package'" class="flex justify-between">
+                                            <div class="pr1">Qty</div>
+                                            <div class="flex">
+                                                <button class="but-widget"><i class="net-minus"></i></button>
+                                                <span class="px050">{item.quantity}</span>
+                                                <button class="but-widget text-colour"><i class="net-plus"></i></button>
+                                            </div>
+                                        </div>
                                     </td>
-                                    <td class="text-right">£99.00</td>
-
                                 </tr>
-                                <tr>
-                                    <td>
-                                        <div class="bold">Static Website Hosting and greatbigdomainnamethingagaginadfdsfad</div>
-                                        <div>Title: NETISTRAR.COM</div>
-                                        <div>12 Nov 2019 - 11 Nov 2020</div>
-                                    </td>
-                                    <td class="text-right">£99.00</td>
 
-                                </tr>
                                 </tbody>
                                 <tfoot>
                                 <tr>
                                     <th colspan="2" class="text-right-lg ">
-                                        <div class="pt2 flex align-center mb0"><span
-                                                class="pr1 w-66 normal">Total ex. VAT</span><span
-                                                class="w-33 normal">&pound;7.99</span></div>
-                                        <div class="flex align-center mb0 pt1"><span
-                                                class="pr1 w-66 normal">VAT</span><span
-                                                class="w-33 normal">&pound;2.99</span></div>
-                                        <div class="pt1 pb2 flex align-center"><span
-                                                class="bold pr1 w-66">Total</span><span
-                                                class="f3 normal w-33">&pound;12.99</span></div>
-                                    </th>
+                                        <div class="pt1 pb2"><span class="bold pr1">Total ex. VAT</span><span
+                                                class="f3 normal py2">{cart.subtotal}</span></div>
 
+                                    </th>
+                                    <th></th>
                                 </tr>
                                 </tfoot>
 
@@ -140,8 +128,8 @@ theme: brand
 
                                 </div>
 
-                                <a href="/order-confirmation/" class="but butgn">place order & pay <i
-                                        class="net-chevron-right"></i></a>
+                                <button class="but butgn place-order">place order & pay <i
+                                        class="net-chevron-right"></i></button>
 
 
                             </div>
@@ -156,48 +144,36 @@ theme: brand
                                                          href="/cart/">edit
                             cart <i class="net-launch-out"></i></a></div>
                         <div class="p050 flex thin align-center small ge mb1">
-                            <i class="net-cart-hollow f4"></i> <span class="f4">1</span> item in your cart
+                            <i class="net-cart-hollow f4"></i> <span class="f4">{cartItems}</span> item in your cart
                         </div>
                         <div class="bort1 borb1 py050 ">
-                            <button class="but butlk butblk inv text-left normal ic icr "><small>View items <i
-                                    class="net-chevron-down"></i></small>
-
-                            </button>
-
-                            <div class="pt050 pb1 small">
-                                <div class="flex">
-                                    <div class="flex1"><b>PRO Static Package</b>
-                                        400GB
+                            <div class="pb1 small">
+                                <div class="flex" kb-each-item="cart.items">
+                                    <div class="flex1">
+                                        <b>{item.title}</b>
                                     </div>
-                                    <div class="w-30 text-right">£12.99</div>
+                                    <div class="w-30 text-right">{item.total}</div>
                                 </div>
-                                <div class="flex">
-                                    <div class="flex1"><b>Extra Bandwidth</b>
-                                        200GB
-                                    </div>
-                                    <div class="w-30 text-right">£10.00</div>
-                                </div>
-
                             </div>
-
+                        <hr>
                         </div>
                         <div class="borb1 small py1">
                             <div class="flex">
                                 <div class="w-66 text-right">Total (ex VAT)</div>
-                                <div class="w-33 text-right">&pound;7.99</div>
+                                <div class="w-33 text-right">{cart.subtotal}</div>
                             </div>
                             <div class="flex py075">
                                 <div class="w-66 text-right">VAT</div>
-                                <div class="w-33 text-right">&pound;2.99</div>
+                                <div class="w-33 text-right">{cart.taxes}</div>
                             </div>
                             <div class="flex">
                                 <div class="w-66 text-right bold">Total</div>
-                                <div class="w-33 text-right bold">&pound;17.99</div>
+                                <div class="w-33 text-right bold">{cart.total}</div>
                             </div>
                         </div>
                         <div class="py1">
-                            <a href="/order-confirmation/" class="but butgn butblk">place order & pay <i
-                                    class="net-chevron-right"></i></a>
+                            <button class="but butgn butblkm place-order">place order & pay <i
+                                    class="net-chevron-right"></i></button>
                         </div>
                     </div>
                 </div>
