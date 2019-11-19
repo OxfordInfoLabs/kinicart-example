@@ -56,6 +56,14 @@ theme: brand
                                 <label class="blk"><input name="paymentselected" type="radio" value="new"> use a different card</label>
 
                                 <kc-stripe-element id="stripe-element" class="p1"></kc-stripe-element>
+                                <div id="loading-payment" class=" progress-modal flex justify-center align-center">
+                                    <div class="white">
+                                        <p>Processing payment method ...</p>
+                                        <div class="text-center">
+                                            <img width="35" src="/images/loading.gif" alt="">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="flex-grid align-center">
