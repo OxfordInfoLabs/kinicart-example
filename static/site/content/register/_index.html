@@ -46,16 +46,29 @@ theme: brand
 
             </div>
             <div class="pb2 pb1l flex-grid">
-                <div class="w-40">
-                    <label class="text-right-lg blk pr4l bold pb050 pb025l" for="username">Enter a name for the
-                        account</label>
-                    <p class="vsmall g8-text pr4l text-right-lg">This is your personal name or company, group or
-                        organisation. You can change this if needed.</p>
+                <div class="w-50">
+                    <label class="text-right-lg blk pr4l bold pb050 pb025l" for="correspondencename">What shall we call you?</label>
+                    <p class="vsmall g8-text pr4l text-right-lg">This may be a personal, department, brand or other name for us address you.</p>
                 </div>
                 <div class="flex1">
-                    <input type="text" class="username-field bor1 gf9 py050 px050 w"
-                           placeholder="e.g. My Company Ltd" data-name-field autocomplete="false">
+                    <input id="username" type="text" class="correspondencename-field bor1 gf9 py050 px050 w"
+                           data-name-field
+                           title="No special characters"
+                           placeholder="e.g. John Smith" autocomplete="false" >
                     <div class="red-text pb1" data-state="hide" data-name-error></div>
+                </div>
+
+            </div>
+            <div class="pb2 pb1l flex-grid">
+                <div class="w-50">
+                    <label class="text-right-lg blk pr4l bold pb050 pb025l" for="username">Enter a name for the account</label>
+                    <p class="vsmall g8-text pr4l text-right-lg">This is your personal name or company, group or organisation. You can change this later.</p>
+                </div>
+                <div class="flex1">
+                    <input type="text" class="username-field bor1 gf9 py050 px050 w" title="No special characters"
+                           data-accountname-field
+                           placeholder="e.g. My Company Ltd"  >
+                    <div class="red-text pb1" data-state="hide" data-accountname-error></div>
                 </div>
 
             </div>

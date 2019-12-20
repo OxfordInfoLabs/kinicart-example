@@ -19,7 +19,7 @@ describe('Register tests', () => {
 
 
 
-    it("Should not be able to login with blank email, company and password", () => {
+    it("Should not be able to register with blank email, name, company and password", () => {
 
 
         // captcha initially
@@ -34,7 +34,8 @@ describe('Register tests', () => {
         expect(StandardForm.hasFieldError("password")).toBeTruthy();
 
         expect(StandardForm.getFieldError("email")).toContain("email address is required");
-        expect(StandardForm.getFieldError("name")).toContain("account name is required");
+        expect(StandardForm.getFieldError("name")).toContain("name is required");
+        expect(StandardForm.getFieldError("accountname")).toContain("account name is required");
         expect(StandardForm.getFieldError("password")).toContain("password is required");
         expect(StandardForm.hasFieldError("recaptcha")).toBeTruthy();
 
