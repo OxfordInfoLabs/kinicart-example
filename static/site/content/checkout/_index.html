@@ -25,13 +25,13 @@ theme: brand
                         <div class="bort3 ge pt2l pt1 pb2 pl4l px1 mb125">
                             <h4 class=" thin">Your Billing details</h4>
                             <div class="flex-grid flex-row-reverse">
-                                <div class="w-40" kb-html="billingContact.htmlAddressLinesString">
+                                <div class="w-40" ka-html="billingContact.htmlAddressLinesString">
 
                                 </div>
                                 <div class="w-60">
 
                                     <p class="thin small">Carefully check all information provided</p>
-                                    <a kb-href="billingURL" class="but butsoftwh butsm ">Change these details</a>
+                                    <a ka-href="billingURL" class="but butsoftwh butsm ">Change these details</a>
                                 </div>
 
                             </div>
@@ -48,8 +48,8 @@ theme: brand
                                 <img height="60" src="/images/payment_methods.png" alt="">
                             </div>
                             <div class="white p150 mb2">
-                                <label class="mb050 blk" kb-each-method="paymentMethods">
-                                    <input name="paymentselected" type="radio" kb-value="method.id">
+                                <label class="mb050 blk" ka-each-method="paymentMethods">
+                                    <input name="paymentselected" type="radio" ka-value="method.id">
                                     ending <b>{method.payment.card.last4}</b>
                                     (expires {method.payment.card.exp_month}/{method.payment.card.exp_year} {method.payment.card.brand})
                                 </label>
@@ -95,15 +95,20 @@ theme: brand
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr kb-each-item="cart.items">
+                                <tr ka-each-item="cart.items">
                                     <td>
                                         <div class="bold">{item.title}</div>
-                                        <div>{item.description}</div>
-                                        <div kb-show="item.subDescription">{item.subDescription}</div>
+                                        <div>{item.subtitle}</div>
+                                        <div class="tiny" ka-show="item.description">{item.description}</div>
+                                        <div class="tiny" ka-each-subitem="item.subItems">
+                                            - {subitem.title}: {subitem.quantity}
+                                        </div>
+
+
                                     </td>
                                     <td class="text-right">{item.total}</td>
                                     <td>
-                                        <div kb-show="item.type | eval '!=' 'package'" class="flex justify-between">
+                                        <div ka-show="item.type | eval '!=' 'package'" class="flex justify-between">
                                             <div class="pr1">Qty</div>
                                             <div class="flex">
                                                 <button class="but-widget"><i class="net-minus"></i></button>
@@ -156,7 +161,7 @@ theme: brand
                         </div>
                         <div class="bort1 borb1 py050 ">
                             <div class="pb1 small">
-                                <div class="flex" kb-each-item="cart.items">
+                                <div class="flex" ka-each-item="cart.items">
                                     <div class="flex1">
                                         <b>{item.title}</b>
                                     </div>

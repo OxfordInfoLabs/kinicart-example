@@ -13,77 +13,137 @@ headerbreadcrumb: true
 
 <h1 class="grid px1 px2l pt2 f3 pb1 bold">Configure your package</h1>
 
-<div class="grid px2l pb3">
+<kc-packaged-product-builder data-product-identifier="virtual-host">
 
-  <div class="flex flex-row-reverse">
-    <div id="checkout-widget" >
-      <div id="foot" class="brand br8tl br8tr px075 py1 ">
-        <div id="dec" class="img-shadow text-center white-text brand hidden-md"><i class="net-chevron-up"></i></div>
-        <div class="totals">
-          <div class="semi uppercase white-text small pb050">Total</div>
-          <div class="white-text f3 pb050">&pound;12.99</div>
-          <div class="vsmall ge-text pb1">1 static hosting</div>
-        </div>
-        <div class="ctrls">
-          <div class="pb050">
-            <a href="/cart/" class="but butgn ic icr w">Add to cart <i class="net-cart-solid"></i></a>
-          </div>
-          <div>
-            <button class="but butbrwh butsm ic icr w">Quick checkout <i class="net-chevron-right"></i></button>
-          </div>
-        </div>
+    <div class="grid px2l pb3">
+
+        <div class="flex flex-row-reverse">
+            <div id="checkout-widget">
+                <div id="foot" class="brand br8tl br8tr px075 py1 ">
+                    <div id="dec" class="img-shadow text-center white-text brand hidden-md"><i
+                            class="net-chevron-up"></i></div>
+                    <div class="totals">
+                        <div class="semi uppercase white-text small pb050">Package Total</div>
+                        <div class="white-text f3 pb050">{plan.workingCurrencySymbol}{packageTotal}</div>
+                    </div>
+                    <div class="ctrls">
+                        <div class="py050">
+                            <a href="#" data-add-to-cart class="but butgn blk ic icr w">
+                                <span ka-if="update | eval '===' 0" >Add to cart</span><span ka-if="update | eval '===' 1" >Update in cart</span> <i class="net-cart-solid"></i></a>
+                        </div>
+                        <div>
+                            <button class="but butbrwh butsm ic icr w">Quick checkout <i class="net-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
 
 
-      </div>
-    </div>
-    <div class="w-75 pr2l">
-      <div class="white mb2 p175">
-
-        <h4>Static Website Hosting: Pro package</h4>
-        <div class="vsmall text-left"><i class="net-special green-text"></i> Unlimited versions<br><i class="net-check green-text"></i> DNSSEC domain security <br>
-          <i class="net-check green-text"></i> Stage/preview hosting<br>
-          <i class="net-check green-text"></i> Production hosting<br>
-          <i class="net-check green-text"></i> Node package tools<br>
-        </div>
-
-      </div>
-      <h5 class="mb0">Bandwidth</h5>
-      <p class="vsmall"><a href="">Which bandwidth is right for you?</a>
-      </p>
-      <div class="white mb1 flex px175 py1 justify-between ">
-        <div>
-          <div class="f5 semi">PRO 400 GB</div>
-
-        </div>
-        <div>
-          Included
-<!--          <label class="radiocheck mb0">Included-->
-<!--            <input name="configurestaticpackage" type="radio" checked="checked">-->
-<!--            <span class="checkmark"></span>-->
-<!--          </label>-->
-
-        </div>
-      </div>
-      <div class="white mb2 flex px175 pt1 justify-between">
-        <div>
-          <div class="f5 semi">Extra bandwidth GB</div>
-          <p class="vsmall">This can be added at any time.</p>
-
-        </div>
-        <div>
-          <div class="flex justify-between align-center">
-            <div class="pr1">+ £20/100GB</div>
-            <div class="flex align-center">
-              <button class="but-widget"><i class="net-minus"></i></button>
-              <span class="px050">0</span>
-              <button class="but-widget text-colour"><i class="net-plus"></i></button>
+                </div>
             </div>
-          </div>
+            <div class="w-75 pr2l">
+                <div class="white mb2 p175">
 
+                    <h4>Virtual Host: {plan.title}</h4>
+                    <div class="vsmall text-left"><span ka-each-feature="plan.packageFeatures">
+                    <i class="net-check green-text"></i> {feature.title} {feature.quantity} <br>
+                    </span>
+                    </div>
+
+                </div>
+
+
+
+<!--                <h5 class="mb0">Name your instance</h5>-->
+<!--                <p class="mb0 small">Enter a name for your instance.  This will help you to identify it in the control panel for management.</p>-->
+<!--                <p class="vsmall mb1"><a href="/domains/">You will also need a good domain name.</a></p>-->
+<!--                <div class="white p2 mb150">-->
+<!--                    <input id="name" type="text" kb-value="fields.hostName" class="name-field w" require=""-->
+<!--                           placeholder="e.g. My First Host" autocomplete="false">-->
+<!--                    <p class="abs red-text small" kb-if="error">{error}</p></div>-->
+
+
+
+                <div ka-each-addon="addOns">
+
+
+
+                    <h5 ka-if="addon.item.parentIncludedFeature">
+                        {addon.item.parentIncludedFeature.title}</h5>
+
+                    <h5 ka-hide="addon.item.parentIncludedFeature" data-state="hide">
+                        {addon.item.title}
+                    </h5>
+
+
+                    <div class="white mb1 flex px175 py1 justify-between " ka-if="addon.item.parentIncludedFeature">
+                        <div>
+                            <div class="f5 semi">{addon.item.parentIncludedFeature.quantity} {addon.item.parentIncludedFeature.unit}</div>
+                        </div>
+                        <div>
+                            Included
+                        </div>
+                    </div>
+
+
+                    <div class="white mb1 flex px175 py1 justify-between bor1 "
+                         ka-hide="addon.item.quantityAddOn" data-state="hide"
+                         ka-class-borbrand="addon.quantity | eval '===' 0"
+                         ka-class-bortrans="addon.quantity | eval '>' 0"
+                         ka-data-add-on-index="addon.addOnIndex" data-deselect>
+
+                        <div class="f5 semi">Not added</div>
+
+                    </div>
+
+                    <div class="white mb2 flex px175 pt1 justify-between bor1 bortrans"
+                         ka-class-borbrand="addon.quantity | eval '>' 0"
+                         ka-class-bortrans="addon.quantity | eval '===' 0"
+                         ka-data-add-on-index="addon.addOnIndex" data-select
+                         ka-hide="addon.item.quantityAddOn" data-state="hide">
+                        <div>
+                            <div class="f5 semi">{addon.item.title}</div>
+                            <p class="vsmall">This can be added at any time.</p>
+
+                        </div>
+                        <div>
+                            <div class="flex justify-between align-center">
+                                <div class="pr1">+ {plan.workingCurrencySymbol}{addon.item.activePrices.MONTHLY} / Month</div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="white mb2 flex px175 pt1 justify-between bor1 bortrans"
+                         ka-class-borbrand="addon.quantity | eval '>' 0"
+                         ka-class-bortrans="addon.quantity | eval '===' 0"
+                         ka-data-add-on-index="addon.addOnIndex"
+                         ka-if="addon.item.quantityAddOn">
+                        <div>
+                            <div class="f5 semi">{addon.item.title}</div>
+                            <p class="vsmall">This can be added at any time.</p>
+
+                        </div>
+                        <div>
+                            <div class="flex justify-between align-center">
+                                <div class="pr1">+ {plan.workingCurrencySymbol}{addon.item.activePrices.MONTHLY} / Month</div>
+
+                                <div class="flex align-center" ka-if="addon.item.quantityAddOn">
+                                    <button class="but-widget" ka-data-add-on-index="addon.addOnIndex" data-quantity-minus><i class="net-minus"></i></button>
+                                    <span class="px050">{addon.quantity}</span>
+                                    <button class="but-widget text-colour" ka-data-add-on-index="addon.addOnIndex" data-quantity-plus><i class="net-plus"></i></button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
         </div>
-      </div>
 
     </div>
-  </div>
 
-</div>
+</kc-packaged-product-builder>

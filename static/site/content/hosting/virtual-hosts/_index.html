@@ -26,21 +26,21 @@ headerbreadcrumb: true
 
       <tr>
         <td class="border-b0 border-l0"></td>
-        <td kb-each-plan="plans" kb-class-white-text="$index" class="border-b0">
+        <td ka-each-plan="plans" ka-class-white-text="$index" class="border-b0">
           <div class="semi f5 mb1 pt1">{plan.title}</div>
           <div class="semi f2 mb1">
-            <span kb-show="plan.workingCurrency | eval '==' 'USD'">$</span><span kb-show="plan.workingCurrency | eval '==' 'GBP'">£</span><span kb-show="plan.workingCurrency | eval '==' 'EUR'">€</span>{plan.activePrices.MONTHLY}
+            {plan.activePrices.MONTHLY}
           </div>
           <div class="semi mb0">Per month</div>
-          <div kb-if="plan.activePrices.ANNUAL">
-            <span kb-show="plan.workingCurrency | eval '==' 'USD'">$</span><span kb-show="plan.workingCurrency | eval '==' 'GBP'">£</span><span kb-show="plan.workingCurrency | eval '==' 'EUR'">€</span>{plan.activePrices.ANNUAL} per year
+          <div ka-if="plan.activePrices.ANNUAL">
+            <span ka-show="plan.workingCurrency | eval '==' 'USD'">$</span><span ka-show="plan.workingCurrency | eval '==' 'GBP'">£</span><span ka-show="plan.workingCurrency | eval '==' 'EUR'">€</span>{plan.activePrices.ANNUAL} per year
           </div>
           <div class="tiny pb2 g8-text">{plan.description}</div>
           <div class="vsmall text-left">
-            <span kb-each-feature="plan.packageFeatures">
+            <span ka-each-feature="plan.packageFeatures">
               <i class="net-check green-text"></i> {feature.title} {feature.quantity} <br>
             </span>
-            <span kb-each-excessFeature="plan.excessFeatures">
+            <span ka-each-excessFeature="plan.excessFeatures">
               <i class="net-check green-text"></i> {excessFeature.title} {excessFeature.quantity} <br>
             </span>
           </div>
@@ -48,27 +48,11 @@ headerbreadcrumb: true
       </tr>
       <tr>
         <td class="border-b0 border-l0"></td>
-        <td kb-each-plan="plans">
-            <a href="#" data-add-to-cart kb-data-plan="plan.identifier" class="but butgn butblk">Choose {plan.title}</a>
+        <td ka-each-plan="plans">
+            <a ka-href="/hosting/virtual-hosts/configure?plan={plan.identifier}"  class="but butgn butblk">Choose {plan.title}</a>
         </td>
       </tr>
-      <tr>
-        <td colspan="2" class="border-l0 border-t0 border-r0 "><h4 class="mb025 pt3">Domain names</h4></td>
-        <td class="border30"></td>
-        <td class="border30"></td>
-      </tr>
-      <tr>
-        <td class="border-l0 border-b0 vtop">Best selling, classic domains <br><a href="/prices/" class="chevron-right inv">View all prices</a></td>
-        <td><div class="pt1"><img src="dotcom-x42.jpg" alt="" height="16"></div><div class="f4 py025 semi">&pound;10.99</div><div class="tiny pb050">Per year</div></td>
-        <td class="border30"><div><img src="dotcom-x42.jpg" alt="" height="16" class="f-white"></div><div class="f4 py025 semi white-text">&pound;10.99</div><div class="tiny gc-text">Per year</div></td>
-        <td class="border30 white-text"><div><img src="dotcom-x42.jpg" alt="" height="16" class="f-white"></div><div class="f4 py025 semi white-text">&pound;10.99</div><div class="tiny gc-text ">Per year</div></td>
-      </tr>
-      <tr>
-        <td class="border-b0 border-l0"></td>
-        <td>lucien.taylor@oxfordinformatonlabs.com</td>
-        <td class="border30">and here's another</td>
-        <td class="border30 white-text">beep</td>
-      </tr>
+
     </table>
   </div>
 </div>

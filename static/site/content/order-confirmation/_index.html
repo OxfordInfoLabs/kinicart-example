@@ -28,18 +28,21 @@ footercta: false
       <thead>
       <tr>
         <td><h4 class="thin mb0">Order summary</h4>
-          <span class="small" kb-html="order.address"></span>
+          <span class="small" ka-html="order.address"></span>
         </td>
         <td class="text-right"><img height="20" src="/images/oxfordcyber_logo-323x34.png" alt=""> <br>www.oxil.uk
           <br><span class="vsmall">Order ref: {order.id} <br>{order.date}</span></td>
       </tr>
       </thead>
       <tbody>
-      <tr kb-each-item="order.orderLines">
+      <tr ka-each-item="order.orderLines">
         <td>
           <div class="bold">{item.title}</div>
-          <div>{item.description}</div>
-<!--          <div class="vsmall"><b>PRO PACKAGE 400GB</b> Monthly</div>-->
+          <div>{item.subtitle}</div>
+          <div class="tiny">{item.description}</div>
+          <div class="tiny" ka-each-subitem="item.subItems">
+            - {subitem.title}: {subitem.quantity}
+          </div>
         </td>
         <td class="text-right">{currency}{item.amount}</td>
 

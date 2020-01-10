@@ -23,11 +23,9 @@ class VirtualHost extends PackagedProduct {
      */
     public function getFeatures() {
         return [
-            new Feature("memory", "Memory (GB)", "The amount of memory allocated to this VM"),
-            new Feature("diskSpace", "Disk Space (GB)", "The amount of disk space allocated to this VM"),
-            new Feature("includedBandwidth", "Included Bandwidth (GB/month)", "The amount of included bandwidth in GB/Month"),
-            new Feature("additionalBandwidth", "Additional Bandwidth (GB/month)", "Additional bandwidth per GB"),
-            new Feature("excessBandwidth", "Excess Bandwidth (GB/month)", "Excess bandwidth charges - additional GBs", Feature::TYPE_EXCESS)
+            new Feature("memory", "Memory (GB)", "The amount of memory allocated to this VM", "GB"),
+            new Feature("diskSpace", "Disk Space (GB)", "The amount of disk space allocated to this VM", "GB"),
+            new Feature("bandwidth", "Bandwidth (GB/month)", "The amount of bandwidth in GB/Month", "GB/Month"),
         ];
     }
 
